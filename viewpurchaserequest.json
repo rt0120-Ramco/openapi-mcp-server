@@ -1,0 +1,1223 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ViewPurchaseRequest",
+    "description": "ViewPurchaseRequest",
+    "version": "1",
+    "x-processname": "Purchase",
+    "x-componentname": "Pur_Req_SER",
+    "x-componentnamealias": "PRA",
+    "x-specid": 677,
+    "x-specname": "ViewPurchaseRequest",
+    "x-specdate": "2024-11-06T10:17:44.25+05:30",
+    "x-specversion": 1,
+    "x-includeprocessinroute": true,
+    "x-includecomponentinroute": true
+  },
+  "servers": [
+    {
+      "url": "https://erpenhdev.ramcouat.com/coreapiops/Purchase/Pur_Req_SER/v1"
+    }
+  ],
+  "paths": {
+    "/ViewPurchaseRequest": {
+      "get": {
+        "summary": "ProjectDetails",
+        "description": "ProjectDetails",
+        "operationId": "ProjectDetails",
+        "responses": {
+          "200": {
+            "description": "ViewPurchaseRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/PRDetails"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "$ref": "#/components/responses/Error204"
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          }
+        },
+        "x-IsCustomCode": false,
+        "x-apipathoperationservicemap": {
+          "ServiceMapInfo": {
+            "ServiceID": 1747,
+            "ComponentName": "Pur_Req_SER",
+            "ServiceName": "PRqVwMn_Ser_Fet_api",
+            "ServiceVersion": 1
+          },
+          "RequestBind": {},
+          "ResponseSchemaType": "Prdetails",
+          "ParameterMappings": {
+            "HDRSEG": {
+              "ParameterMapInfo": [
+                {
+                  "ParameterName": "PrNo",
+                  "IsRequired": false,
+                  "DataItemName": "pr_no"
+                }
+              ]
+            }
+          },
+          "ResponseMappings": {
+            "actionResponse1": {
+              "ResponseMap": {
+                "MapID": "actionResponse1",
+                "DisplaySchemaType": "Prdetails",
+                "IsMultiSegment": false,
+                "SchemaVariable": "PRDetails",
+                "SegmentHierachy": "hdrseg",
+                "SegmentName": "hdrseg",
+                "ActualSegmentName": "HDRSEG"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "DateTime",
+                  "PropertyName": "ApprovalDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "approvaldate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "AuthorizationRemarks",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "authorization_remarks"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "PrCurrency",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "currency_combo_crtpr"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "ExchangeRate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "exchange_rate_crtpr"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "Folder",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "folder"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "Name",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "name_1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "DateTime",
+                  "PropertyName": "CreatedDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_createddate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "CreatedAtOu",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_created_at_ou"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "CreatedBy",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_creationby"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "Desc",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_desc"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "LastModifiedBy",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_lastmodificationby"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "DateTime",
+                  "PropertyName": "LastModifiedDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_lastmodifieddate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "OrderAt",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_orderatouhdr"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "ProjectDescription",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_project_description"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "ReasonForReturn",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_reasonforreturnvw"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "ReceiptAt",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_receiptatou"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "Mode",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_scomode"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "DateTime",
+                  "PropertyName": "PrDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prdate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "ProjectCode",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "project_code"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "PrOrigin",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prorigin"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "PrType",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prtype"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "PrValueBaseCurrency",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prvalue"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "PrNo",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pr_no"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "PrValueTransactionCurrency",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pr_tran_value"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "Requestedfor",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "requested_for"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "RequesterId",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "requesterid"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "RequesterName",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "requestid_name_vprhdr"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "ShortcloseReasonCode",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "shortclose_reason_code"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "Status",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "status"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "Remarks",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "text255"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Prdetails",
+                  "DataType": "String",
+                  "PropertyName": "WorkflowStatus",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "wfstatus_view"
+                }
+              ]
+            },
+            "actionResponse2": {
+              "ResponseMap": {
+                "MapID": "actionResponse2",
+                "SchemaHierarchy": "Prdetails",
+                "DisplaySchemaType": "Projectdetails",
+                "IsMultiSegment": false,
+                "SchemaVariable": "prdetails.ProjectDetails",
+                "SegmentHierachy": "_mlt_rmseg",
+                "SegmentName": "_mlt_rmseg",
+                "ActualSegmentName": "Mlt_RMSEG"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "AdhocItemClass",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "adhocitemclassml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "AuthorizedQuantity",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "authqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "Comments",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "comments_vwprq"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "DrawingNo",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "drawingno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "DrgRevisionNo",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "drg_revision_no"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "SupplierName",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "fromsuppliername"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "HsnsacCode",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hsn_sac_code_vml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "ItemCode",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "item_code"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "Per",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "mltper"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "DateTime",
+                  "PropertyName": "NeedDate",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "needdateml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "PoAuthorisedQty",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "po_authorisedqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "Cost",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "po_cost"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "PoCoveredQty",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "po_coveredqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "Uom",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_bscouom"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "Details",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_details"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "ItemDesc",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_itemdescriptionml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "ReceiptAt",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_receiptat"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "SupplierItemDesc",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_supplieritemdesc"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "WbsId",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pra_wbs_id"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "PreferredSupplierCode",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prefsuppliercode"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "PreferredSuppliersName",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prefsuppliername"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "int",
+                  "PropertyName": "PrLineNo",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prlineno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "TaskCode",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prs_taskcode"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "TaskDesc",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prs_taskdesc"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "int",
+                  "PropertyName": "RefDocLineNo",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "refdoclinenoml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "RefDocType",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "referencetypemlt"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "RefDocNo",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ref_docmlt"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "RequiredQty",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "reqdqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "ScheduleType",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sched_typeml_view"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "Status",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "status_mlt"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "SupplierItemRef",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "supplieritemref"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "SupplierCode",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "supplier_code"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "TotalValue",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "totalvalueml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "VariantCode",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "variantno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Projectdetails",
+                  "DataType": "String",
+                  "PropertyName": "Warehouse",
+                  "SegmentName": "_mlt_rmseg",
+                  "ActualSegmentName": "Mlt_RMSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "warehousemulti"
+                }
+              ]
+            }
+          }
+        },
+        "x-ispaginationenabled": false
+      },
+      "parameters": [
+        {
+          "name": "PrNo",
+          "in": "query",
+          "description": "PrNo",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "context-lang-id",
+          "in": "header",
+          "description": "Language Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "context-ou-id",
+          "in": "header",
+          "description": "Orgnz Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "context-role-name",
+          "in": "header",
+          "description": "Role Id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "PRDetails": {
+        "required": [
+          "PrNo"
+        ],
+        "type": "object",
+        "properties": {
+          "ApprovalDate": {
+            "type": "string",
+            "description": "ApprovalDate",
+            "format": "date"
+          },
+          "AuthorizationRemarks": {
+            "type": "string",
+            "description": "AuthorizationRemarks"
+          },
+          "CreatedAtOu": {
+            "type": "string",
+            "description": "CreatedAtOu"
+          },
+          "CreatedBy": {
+            "type": "string",
+            "description": "CreatedBy"
+          },
+          "CreatedDate": {
+            "type": "string",
+            "description": "CreatedDate",
+            "format": "date-time"
+          },
+          "Desc": {
+            "type": "string",
+            "description": "Desc"
+          },
+          "ExchangeRate": {
+            "type": "number",
+            "description": "ExchangeRate",
+            "format": "number"
+          },
+          "Folder": {
+            "type": "string",
+            "description": "Folder"
+          },
+          "LastModifiedBy": {
+            "type": "string",
+            "description": "LastModifiedBy"
+          },
+          "LastModifiedDate": {
+            "type": "string",
+            "description": "LastModifiedDate",
+            "format": "date-time"
+          },
+          "Mode": {
+            "type": "string",
+            "description": "Mode"
+          },
+          "Name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "OrderAt": {
+            "type": "string",
+            "description": "OrderAt"
+          },
+          "PrCurrency": {
+            "type": "string",
+            "description": "Currency"
+          },
+          "PrDate": {
+            "type": "string",
+            "description": "PrDate",
+            "format": "date"
+          },
+          "PrNo": {
+            "type": "string",
+            "description": "PrNo"
+          },
+          "ProjectCode": {
+            "type": "string",
+            "description": "ProjectCode"
+          },
+          "ProjectDescription": {
+            "type": "string",
+            "description": "ProjectDescription"
+          },
+          "PrOrigin": {
+            "type": "string",
+            "description": "PrOrigin"
+          },
+          "PrType": {
+            "type": "string",
+            "description": "PrType"
+          },
+          "PrValueBaseCurrency": {
+            "type": "number",
+            "description": "PrValueBaseCurrency",
+            "format": "number"
+          },
+          "PrValueTransactionCurrency": {
+            "type": "number",
+            "description": "PrValueTransactionCurrency",
+            "format": "number"
+          },
+          "ReasonForReturn": {
+            "type": "string",
+            "description": "ReasonForReturn"
+          },
+          "ReceiptAt": {
+            "type": "string",
+            "description": "ReceiptAt"
+          },
+          "Remarks": {
+            "type": "string",
+            "description": "Remarks"
+          },
+          "Requestedfor": {
+            "type": "string",
+            "description": "Requestedfor"
+          },
+          "RequesterId": {
+            "type": "string",
+            "description": "RequesterId"
+          },
+          "RequesterName": {
+            "type": "string",
+            "description": "RequesterName"
+          },
+          "ShortcloseReasonCode": {
+            "type": "string",
+            "description": "ShortcloseReasonCode"
+          },
+          "Status": {
+            "type": "string",
+            "description": "Status"
+          },
+          "WorkflowStatus": {
+            "type": "string",
+            "description": "WorkflowStatus"
+          },
+          "ProjectDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProjectDetails"
+            },
+            "description": "ProjectDetails"
+          }
+        },
+        "description": "PRDetails",
+        "x-schemarequired": false
+      },
+      "ProjectDetails": {
+        "type": "object",
+        "properties": {
+          "AdhocItemClass": {
+            "type": "string",
+            "description": "AdhocItemClass"
+          },
+          "AuthorizedQuantity": {
+            "type": "number",
+            "description": "AuthorizedQuantity",
+            "format": "number"
+          },
+          "Comments": {
+            "type": "string",
+            "description": "Comments"
+          },
+          "Cost": {
+            "type": "number",
+            "description": "Cost",
+            "format": "number"
+          },
+          "Details": {
+            "type": "string",
+            "description": "Details"
+          },
+          "DrawingNo": {
+            "type": "string",
+            "description": "DrawingNo"
+          },
+          "DrgRevisionNo": {
+            "type": "string",
+            "description": "DrgRevisionNo"
+          },
+          "HsnsacCode": {
+            "type": "string",
+            "description": "HsnsacCode"
+          },
+          "ItemCode": {
+            "type": "string",
+            "description": "ItemCode"
+          },
+          "ItemDesc": {
+            "type": "string",
+            "description": "ItemDesc"
+          },
+          "NeedDate": {
+            "type": "string",
+            "description": "NeedDate",
+            "format": "date"
+          },
+          "Per": {
+            "type": "number",
+            "description": "Per",
+            "format": "number"
+          },
+          "PoAuthorisedQty": {
+            "type": "number",
+            "description": "PoAuthorisedQty",
+            "format": "number"
+          },
+          "PoCoveredQty": {
+            "type": "number",
+            "description": "PoCoveredQty",
+            "format": "number"
+          },
+          "PreferredSupplierCode": {
+            "type": "string",
+            "description": "PreferredSupplierCode"
+          },
+          "PreferredSuppliersName": {
+            "type": "string",
+            "description": "PreferredSuppliersName"
+          },
+          "PrLineNo": {
+            "type": "integer",
+            "description": "PrLineNo"
+          },
+          "ReceiptAt": {
+            "type": "string",
+            "description": "ReceiptAt"
+          },
+          "RefDocLineNo": {
+            "type": "integer",
+            "description": "RefDocLineNo"
+          },
+          "RefDocNo": {
+            "type": "string",
+            "description": "RefDocNo"
+          },
+          "RefDocType": {
+            "type": "string",
+            "description": "RefDocType"
+          },
+          "RequiredQty": {
+            "type": "number",
+            "description": "RequiredQty",
+            "format": "number"
+          },
+          "ScheduleType": {
+            "type": "string",
+            "description": "ScheduleType"
+          },
+          "Status": {
+            "type": "string",
+            "description": "Status"
+          },
+          "SupplierCode": {
+            "type": "string",
+            "description": "SupplierCode"
+          },
+          "SupplierItemDesc": {
+            "type": "string",
+            "description": "SupplierItemDesc"
+          },
+          "SupplierItemRef": {
+            "type": "string",
+            "description": "SupplierItemRef"
+          },
+          "SupplierName": {
+            "type": "string",
+            "description": "SupplierName"
+          },
+          "TaskCode": {
+            "type": "string",
+            "description": "TaskCode"
+          },
+          "TaskDesc": {
+            "type": "string",
+            "description": "TaskDesc"
+          },
+          "TotalValue": {
+            "type": "number",
+            "description": "TotalValue",
+            "format": "number"
+          },
+          "Uom": {
+            "type": "string",
+            "description": "Uom"
+          },
+          "VariantCode": {
+            "type": "string",
+            "description": "VariantCode"
+          },
+          "Warehouse": {
+            "type": "string",
+            "description": "Warehouse"
+          },
+          "WbsId": {
+            "type": "string",
+            "description": "WbsId"
+          }
+        },
+        "description": "ProjectDetails",
+        "x-schemarequired": false
+      },
+      "apierror": {
+        "type": "object",
+        "properties": {
+          "instance": {
+            "type": "integer",
+            "description": "Instance Number",
+            "format": "int32"
+          },
+          "seqNo": {
+            "type": "integer",
+            "description": "Error Sequence Number",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "description": "Error ID",
+            "format": "int32"
+          },
+          "source": {
+            "type": "string",
+            "description": "Error Source"
+          },
+          "description": {
+            "type": "string",
+            "description": "Error Description"
+          },
+          "correctiveAction": {
+            "type": "string",
+            "description": "Error CorrectiveAction"
+          }
+        },
+        "description": "Error Object",
+        "x-schemarequired": false
+      },
+      "apierrors": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/apierror"
+        },
+        "description": "List of Error Object",
+        "x-schemarequired": false
+      }
+    },
+    "responses": {
+      "Error204": {
+        "description": "NO CONTENT"
+      },
+      "Error400": {
+        "description": "BAD DATA",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierrors"
+            }
+          }
+        }
+      },
+      "Error500": {
+        "description": "INVALID REQUEST",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierror"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "core_rids": {
+        "type": "oauth2",
+        "description": "Authorization header using the Bearer scheme. Example: \\\"Authorization: Bearer {token}\\\"",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://erpenhdev.ramcouat.com/coresecurityops/connect/authorize",
+            "scopes": {
+              "rvw_impersonate": "User impersonation scope"
+            }
+          },
+          "clientCredentials": {
+            "tokenUrl": "https://erpenhdev.ramcouat.com/coresecurityops/connect/token",
+            "scopes": {
+              "rvw_nonimpersonate": "Service impersonation scope"
+            }
+          },
+          "authorizationCode": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "refreshUrl": "https://www.ramco.com/rvw",
+            "scopes": {
+              "rvw_anonymous": "User impersonation scope"
+            }
+          }
+        }
+      }
+    }
+  }
+}

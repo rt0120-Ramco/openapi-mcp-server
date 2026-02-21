@@ -1,0 +1,1099 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "AuthorizeAssetACAP",
+    "description": "AuthorizeAssetACAP",
+    "version": "1",
+    "x-processname": "FA",
+    "x-componentname": "ACAP_SER",
+    "x-componentnamealias": "ViewAssetInfo",
+    "x-specid": 3758,
+    "x-specname": "AuthorizeAssetACAP",
+    "x-specdate": "2025-09-09T12:19:00.08+05:30",
+    "x-specversion": 1,
+    "x-includeprocessinroute": true,
+    "x-includecomponentinroute": true
+  },
+  "servers": [
+    {
+      "url": "https://erpenhdev.ramcouat.com/coreapiops/FA/ACAP_SER/v1"
+    }
+  ],
+  "paths": {
+    "/AuthorizeAssetACAP": {
+      "post": {
+        "summary": "AuthorizeAssetACAP",
+        "description": "AuthorizeAssetACAP",
+        "operationId": "AuthorizeAssetACAP",
+        "requestBody": {
+          "description": "AuthorizeAssetACAP",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/authorizeassetacaphdr"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "AuthorizeAssetACAP",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/authorizeassetacapresponse"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "$ref": "#/components/responses/Error204"
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          }
+        },
+        "x-IsCustomCode": false,
+        "x-canbechallenged": false,
+        "x-IsCacheEnabled": false,
+        "x-ispublish": false,
+        "x-apipathoperationservicemap": {
+          "ServiceMapInfo": {
+            "ServiceID": 4048,
+            "ComponentName": "ACAP_SER",
+            "ServiceName": "ACAPAuAsESrAuAs_api",
+            "ServiceVersion": 1
+          },
+          "RequestBind": {
+
+          },
+          "ResponseSchemaType": "Authorizeassetacapresponse",
+          "RequestBindings": {
+            "1": {
+              "RequestBind": {
+                "DisplaySchemaType": "Authorizeassetacaphdr",
+                "ForLoopRequired": false,
+                "SchemaVariable": "authorizeassetacaphdr",
+                "SchemaHierarchy": "",
+                "SegmentName": "hdrsegment"
+              },
+              "RequestBindProperties": [
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "acsdoctype",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "acs_doctype",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extrachar1",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "acs_extra_char1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extrachar2",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "acs_extra_char2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extradate1",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "acs_extra_date1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extradate2",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "acs_extra_date2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "assetclasscode1",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "assetclass",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "assetno2",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "assetnumber",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "assetstatus",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "assetstatusenn",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "docno",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "documentnumber",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extraamount1",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_amount1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extrachar3",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_char3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extrachar4",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_char4",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extrachar5",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_char5",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extradate3",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_date3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extradatetime1",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_datetime1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extradatetime2",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_datetime2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extradatetime3",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_datetime3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extraint1",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_int1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extraint2",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_int2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extraint3",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_int3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extranum1",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_num1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extranum2",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_num2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "extraqty1",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_qty1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "financebook2",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "fb",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "fprowno",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "fprowno",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "guid",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "guid",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Authorizeassetacaphdr",
+                  "PropertyName": "proposalno",
+                  "SchemaVariable": "authorizeassetacaphdr",
+                  "SegmentName": "hdrsegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "proposalnumber",
+                  "SchemaCategory": "C"
+                }
+              ]
+            },
+            "2": {
+              "RequestBind": {
+                "DisplaySchemaType": "Authorizeassetacapmldtml",
+                "ForLoopRequired": false,
+                "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                "SchemaHierarchy": "Authorizeassetacaphdr",
+                "SegmentName": "_mldtmlseg"
+              },
+              "RequestBindProperties": [
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "timestamp1",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "acs_timestamp1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "assetclasscode2",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "assetclassml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "assetcost",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "assetcost",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "assetdesc",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "assetdescription",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "assetno1",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "assetnumberml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "capitalizationno",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "capitalizationnumber",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "costcenter",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "costcenterml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "financebook1",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "fbml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextraamount1",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_amount1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextrachar1",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextrachar2",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextrachar3",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextrachar4",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char4",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextrachar5",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char5",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextradate1",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextradate2",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextradate3",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextradatetime1",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextradatetime2",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextradatetime3",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextraint1",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextraint2",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextraint3",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextranum1",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_num1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextranum2",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_num2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "mlextraqty1",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_qty1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "modeflag",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "modeflag",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Authorizeassetacapmldtml",
+                  "PropertyName": "transactiondate",
+                  "SchemaVariable": "authorizeassetacaphdr.Authorizeassetacapmldtml",
+                  "SegmentName": "_mldtmlseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "transactiondatemlt",
+                  "SchemaCategory": "C"
+                }
+              ]
+            }
+          },
+          "ResponseMappings": {
+            "actionResponse1": {
+              "ResponseMap": {
+                "MapID": "actionResponse1",
+                "DisplaySchemaType": "Authorizeassetacapresponse",
+                "IsMultiSegment": false,
+                "SchemaVariable": "authorizeassetacapresponse",
+                "SegmentHierachy": "hdrsegment",
+                "SegmentName": "hdrsegment",
+                "ActualSegmentName": "HdrSegment"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Authorizeassetacapresponse",
+                  "DataType": "String",
+                  "PropertyName": "responsemessage",
+                  "SegmentName": "hdrsegment",
+                  "ActualSegmentName": "HdrSegment",
+                  "SegmentInstance": 0,
+                  "DataItemName": "responsemessage"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "context-lang-id",
+          "in": "header",
+          "description": "Language Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "context-ou-id",
+          "in": "header",
+          "description": "Orgnz Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "context-role-name",
+          "in": "header",
+          "description": "Role Id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "authorizeassetacaphdr": {
+        "type": "object",
+        "properties": {
+          "acsdoctype": {
+            "type": "string",
+            "description": "acsdoctype"
+          },
+          "assetclasscode1": {
+            "type": "string",
+            "description": "assetclasscode"
+          },
+          "assetno2": {
+            "type": "string",
+            "description": "assetno"
+          },
+          "assetstatus": {
+            "type": "string",
+            "description": "assetstatus"
+          },
+          "docno": {
+            "type": "string",
+            "description": "docno"
+          },
+          "extraamount1": {
+            "type": "number",
+            "description": "extraamount1",
+            "format": "number"
+          },
+          "extrachar1": {
+            "type": "string",
+            "description": "extrachar1"
+          },
+          "extrachar2": {
+            "type": "string",
+            "description": "extrachar2"
+          },
+          "extrachar3": {
+            "type": "string",
+            "description": "extrachar3"
+          },
+          "extrachar4": {
+            "type": "string",
+            "description": "extrachar4"
+          },
+          "extrachar5": {
+            "type": "string",
+            "description": "extrachar5"
+          },
+          "extradate1": {
+            "type": "string",
+            "description": "extradate1",
+            "format": "date"
+          },
+          "extradate2": {
+            "type": "string",
+            "description": "extradate2",
+            "format": "date"
+          },
+          "extradate3": {
+            "type": "string",
+            "description": "extradate3",
+            "format": "date"
+          },
+          "extradatetime1": {
+            "type": "string",
+            "description": "extradatetime1",
+            "format": "date-time"
+          },
+          "extradatetime2": {
+            "type": "string",
+            "description": "extradatetime2",
+            "format": "date-time"
+          },
+          "extradatetime3": {
+            "type": "string",
+            "description": "extradatetime3",
+            "format": "date-time"
+          },
+          "extraint1": {
+            "type": "integer",
+            "description": "extraint1"
+          },
+          "extraint2": {
+            "type": "integer",
+            "description": "extraint2"
+          },
+          "extraint3": {
+            "type": "integer",
+            "description": "extraint3"
+          },
+          "extranum1": {
+            "type": "number",
+            "description": "extranum1",
+            "format": "number"
+          },
+          "extranum2": {
+            "type": "number",
+            "description": "extranum2",
+            "format": "number"
+          },
+          "extraqty1": {
+            "type": "number",
+            "description": "extraqty1",
+            "format": "number"
+          },
+          "financebook2": {
+            "type": "string",
+            "description": "financebook"
+          },
+          "fprowno": {
+            "type": "integer",
+            "description": "fprowno"
+          },
+          "guid": {
+            "type": "string",
+            "description": "guid"
+          },
+          "proposalno": {
+            "type": "string",
+            "description": "proposalno"
+          },
+          "authorizeassetacapmldtml": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/authorizeassetacapmldtml"
+            },
+            "description": "authorizeassetacapmldtml"
+          }
+        },
+        "description": "authorizeassetacaphdr",
+        "x-schemarequired": false
+      },
+      "authorizeassetacapmldtml": {
+        "type": "object",
+        "properties": {
+          "assetclasscode2": {
+            "type": "string",
+            "description": "assetclasscode"
+          },
+          "assetcost": {
+            "type": "number",
+            "description": "assetcost",
+            "format": "number"
+          },
+          "assetdesc": {
+            "type": "string",
+            "description": "assetdesc"
+          },
+          "assetno1": {
+            "type": "string",
+            "description": "assetno"
+          },
+          "capitalizationno": {
+            "type": "string",
+            "description": "capitalizationno"
+          },
+          "costcenter": {
+            "type": "string",
+            "description": "costcenter"
+          },
+          "financebook1": {
+            "type": "string",
+            "description": "financebook"
+          },
+          "mlextraamount1": {
+            "type": "number",
+            "description": "mlextraamount1",
+            "format": "number"
+          },
+          "mlextrachar1": {
+            "type": "string",
+            "description": "mlextrachar1"
+          },
+          "mlextrachar2": {
+            "type": "string",
+            "description": "mlextrachar2"
+          },
+          "mlextrachar3": {
+            "type": "string",
+            "description": "mlextrachar3"
+          },
+          "mlextrachar4": {
+            "type": "string",
+            "description": "mlextrachar4"
+          },
+          "mlextrachar5": {
+            "type": "string",
+            "description": "mlextrachar5"
+          },
+          "mlextradate1": {
+            "type": "string",
+            "description": "mlextradate1",
+            "format": "date"
+          },
+          "mlextradate2": {
+            "type": "string",
+            "description": "mlextradate2",
+            "format": "date"
+          },
+          "mlextradate3": {
+            "type": "string",
+            "description": "mlextradate3",
+            "format": "date"
+          },
+          "mlextradatetime1": {
+            "type": "string",
+            "description": "mlextradatetime1",
+            "format": "date-time"
+          },
+          "mlextradatetime2": {
+            "type": "string",
+            "description": "mlextradatetime2",
+            "format": "date-time"
+          },
+          "mlextradatetime3": {
+            "type": "string",
+            "description": "mlextradatetime3",
+            "format": "date-time"
+          },
+          "mlextraint1": {
+            "type": "integer",
+            "description": "mlextraint1"
+          },
+          "mlextraint2": {
+            "type": "integer",
+            "description": "mlextraint2"
+          },
+          "mlextraint3": {
+            "type": "integer",
+            "description": "mlextraint3"
+          },
+          "mlextranum1": {
+            "type": "number",
+            "description": "mlextranum1",
+            "format": "number"
+          },
+          "mlextranum2": {
+            "type": "number",
+            "description": "mlextranum2",
+            "format": "number"
+          },
+          "mlextraqty1": {
+            "type": "number",
+            "description": "mlextraqty1",
+            "format": "number"
+          },
+          "modeflag": {
+            "type": "string",
+            "description": "modeflag"
+          },
+          "timestamp1": {
+            "type": "integer",
+            "description": "timestamp1"
+          },
+          "transactiondate": {
+            "type": "string",
+            "description": "transactiondate",
+            "format": "date"
+          }
+        },
+        "description": "authorizeassetacapmldtml",
+        "x-schemarequired": false
+      },
+      "authorizeassetacapresponse": {
+        "type": "object",
+        "properties": {
+          "responsemessage": {
+            "type": "string",
+            "description": "responsemessage"
+          }
+        },
+        "description": "authorizeassetacapresponse",
+        "x-schemarequired": false
+      },
+      "apierror": {
+        "type": "object",
+        "properties": {
+          "instance": {
+            "type": "integer",
+            "description": "Instance Number",
+            "format": "int32"
+          },
+          "seqNo": {
+            "type": "integer",
+            "description": "Error Sequence Number",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "description": "Error ID",
+            "format": "int32"
+          },
+          "source": {
+            "type": "string",
+            "description": "Error Source"
+          },
+          "description": {
+            "type": "string",
+            "description": "Error Description"
+          },
+          "correctiveAction": {
+            "type": "string",
+            "description": "Error CorrectiveAction"
+          }
+        },
+        "description": "Error Object",
+        "x-schemarequired": false
+      },
+      "apierrors": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/apierror"
+        },
+        "description": "List of Error Object",
+        "x-schemarequired": false
+      }
+    },
+    "responses": {
+      "Error204": {
+        "description": "NO CONTENT"
+      },
+      "Error400": {
+        "description": "BAD DATA",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierrors"
+            }
+          }
+        }
+      },
+      "Error500": {
+        "description": "INVALID REQUEST",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierror"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "core_rids": {
+        "type": "oauth2",
+        "description": "Authorization header using the Bearer scheme. Example: \\\"Authorization: Bearer {token}\\\"",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://erpenhdev.ramcouat.com/coresecurityops/connect/authorize",
+            "scopes": {
+              "rvw_impersonate": "User impersonation scope"
+            }
+          },
+          "clientCredentials": {
+            "tokenUrl": "https://erpenhdev.ramcouat.com/coresecurityops/connect/token",
+            "scopes": {
+              "rvw_nonimpersonate": "Service impersonation scope"
+            }
+          },
+          "authorizationCode": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "refreshUrl": "https://www.ramco.com/rvw",
+            "scopes": {
+              "rvw_anonymous": "User impersonation scope"
+            }
+          }
+        }
+      }
+    }
+  }
+}
