@@ -69,7 +69,7 @@ def create_unified_server():
         client=client_1,
         name="JSONPlaceholder"
     )
-    add_server(main_mcp, mcp_1, prefix="jsonplaceholder")
+    add_server(main_mcp, mcp_1, prefix="")
 
     # ==================== AuthorizeAssets API ====================
     print("\n📦 Loading AuthorizeAssets API...")
@@ -93,7 +93,7 @@ def create_unified_server():
         client=client_2,
         name="AuthorizeAssets"
     )
-    add_server(main_mcp, mcp_2, prefix="authorizeassets")
+    add_server(main_mcp, mcp_2, prefix="")
 
     # ==================== ViewPurchaseRequest API ====================
     print("\n📦 Loading ViewPurchaseRequest API...")
@@ -117,7 +117,7 @@ def create_unified_server():
         client=client_3,
         name="ViewPurchaseRequest"
     )
-    add_server(main_mcp, mcp_3, prefix="viewpurchaserequest")
+    add_server(main_mcp, mcp_3, prefix="")
 
     # Count total tools
     tool_count = 0
