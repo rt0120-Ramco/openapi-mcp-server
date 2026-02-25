@@ -1,0 +1,1371 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "createPRPOConversion",
+    "description": "createPRPOConversion",
+    "version": "1",
+    "x-processname": "Purchase",
+    "x-componentname": "PROConv_SER",
+    "x-componentnamealias": "PROConv_SER",
+    "x-specid": 2544,
+    "x-specname": "createPRPOConversion",
+    "x-specdate": "2025-06-03T15:46:37.2130000+05:30",
+    "x-specversion": 1,
+    "x-includeprocessinroute": true,
+    "x-includecomponentinroute": true
+  },
+  "paths": {
+    "/createPRPOConversion": {
+      "post": {
+        "summary": "createPRPOConversion",
+        "description": "createPRPOConversion",
+        "operationId": "createPRPOConversion",
+        "requestBody": {
+          "description": "createPRPOConversion",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/createprpoconversionhdr"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "createPRPOConversion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/createprpoconversionresponse"
+                }
+              }
+            }
+          },
+          "204": {
+            "$ref": "#/components/responses/Error204"
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          }
+        },
+        "x-IsCustomCode": false,
+        "x-canbechallenged": false,
+        "x-IsCacheEnabled": false,
+        "x-ispublish": false,
+        "x-apipathoperationservicemap": {
+          "ServiceMapInfo": {
+            "ServiceID": 2885,
+            "ComponentName": "PROConv_SER",
+            "ServiceName": "Rpp_cpo_Ser_sbt_api",
+            "ServiceVersion": 1
+          },
+          "RequestBind": { },
+          "ResponseSchemaType": "Createprpoconversionresponse",
+          "RequestBindings": {
+            "1": {
+              "RequestBind": {
+                "DisplaySchemaType": "Createprpoconversionhdr",
+                "ForLoopRequired": false,
+                "SchemaVariable": "createprpoconversionhdr",
+                "SchemaHierarchy": "",
+                "SegmentName": "hdrseg"
+              },
+              "RequestBindProperties": [
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "blanketpono",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "blpono",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "docno",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "doc_num",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extraamount1",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_amount1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extrachar3",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_char3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extrachar4",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_char4",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extrachar5",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_char5",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extradate3",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_date3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extradatetime1",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_datetime1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extradatetime2",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_datetime2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extradatetime3",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_datetime3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extraint1",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_int1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extraint2",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_int2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extraint3",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_int3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extranum1",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_num1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extranum2",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_num2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extraqty1",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_qty1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "fprowno",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "fprowno",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "numberingseries",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "noseries",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "ordercriterion",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ordcriterion",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "docdate",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pca_documentdate",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extrachar1",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pca_extra_char1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extrachar2",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pca_extra_char2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extradate1",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pca_extra_date1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "extradate2",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pca_extra_date2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "guid",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pca_guid",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "suppliercode",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pca_supplier",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "quotationno",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "quotnumber",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "1",
+                  "SchemaName": "Createprpoconversionhdr",
+                  "PropertyName": "name",
+                  "SchemaVariable": "createprpoconversionhdr",
+                  "SegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "suppliermatname",
+                  "SchemaCategory": "C"
+                }
+              ]
+            },
+            "2": {
+              "RequestBind": {
+                "DisplaySchemaType": "Createprpoconversionmlprm",
+                "ForLoopRequired": false,
+                "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                "SchemaHierarchy": "Createprpoconversionhdr",
+                "SegmentName": "_mlpr_mseg"
+              },
+              "RequestBindProperties": [
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "customercode",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "customercode_ml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "customername",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "cust_name",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "dropshipid",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "drpshpidml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "fromsuppliername",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "fromsuppliername",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextraamount1",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_amount1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextrachar1",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextrachar2",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextrachar3",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextrachar4",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char4",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextrachar5",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char5",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextradate1",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextradate2",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextradate3",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextradatetime1",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextradatetime2",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextradatetime3",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextraint1",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextraint2",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextraint3",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int3",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextranum1",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_num1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextranum2",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_num2",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "mlextraqty1",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_qty1",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "modeflag",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "modeflag",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "orderquantity",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "orderqtyml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "pcaitemcodemul",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pca_item_code_mul",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "itemdescription",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pca_item_desc_mul",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "pcauommult",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pca_uommult",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prauthqty",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prauthqty_po",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prquantity",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prauthqty_po",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prbalanceqty",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prbalanceqtyml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prcoveredqty",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prcoveredqtyml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prcreatedat",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prcrtdatmlt",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prdate",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prdate_prpo",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "preferredsuppliercode",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prefsuppliercode",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prlineno",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prlinno",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prneeddate",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prneeddateml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prno",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prnoml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prorigin",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "proriginmlt",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "prscheduleno",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prschlno",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "receiptat",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "receiptatoumlt",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "requestedfor",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "requestfor_ml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "requesterid",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "requestid_ml",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "stdsuppliercode",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "stdsuppliercode",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "tosuppliername",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "tosuppliername",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "uom",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "uom_free_hdr",
+                  "SchemaCategory": "C"
+                },
+                {
+                  "BindID": "2",
+                  "SchemaName": "Createprpoconversionmlprm",
+                  "PropertyName": "variantcode",
+                  "SchemaVariable": "createprpoconversionhdr.Createprpoconversionmlprm",
+                  "SegmentName": "_mlpr_mseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "variantml",
+                  "SchemaCategory": "C"
+                }
+              ]
+            }
+          },
+          "ResponseMappings": {
+            "actionResponse1": {
+              "ResponseMap": {
+                "MapID": "actionResponse1",
+                "DisplaySchemaType": "Createprpoconversionresponse",
+                "IsMultiSegment": false,
+                "SchemaVariable": "createprpoconversionresponse",
+                "SegmentHierachy": "hdrseg",
+                "SegmentName": "hdrseg",
+                "ActualSegmentName": "HDRSEG"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Createprpoconversionresponse",
+                  "DataType": "String",
+                  "PropertyName": "docno",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "doc_num"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Createprpoconversionresponse",
+                  "DataType": "String",
+                  "PropertyName": "responsemessage",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "HDRSEG",
+                  "SegmentInstance": 0,
+                  "DataItemName": "responsemessage"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "context-lang-id",
+          "in": "header",
+          "description": "Language Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "context-ou-id",
+          "in": "header",
+          "description": "Orgnz Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "context-role-name",
+          "in": "header",
+          "description": "Role Id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "createprpoconversionhdr": {
+        "type": "object",
+        "properties": {
+          "blanketpono": {
+            "type": "string",
+            "description": "blanketpono"
+          },
+          "docdate": {
+            "type": "string",
+            "description": "docdate",
+            "format": "date"
+          },
+          "docno": {
+            "type": "string",
+            "description": "docno"
+          },
+          "extraamount1": {
+            "type": "number",
+            "description": "extraamount1",
+            "format": "number"
+          },
+          "extrachar1": {
+            "type": "string",
+            "description": "extrachar1"
+          },
+          "extrachar2": {
+            "type": "string",
+            "description": "extrachar2"
+          },
+          "extrachar3": {
+            "type": "string",
+            "description": "extrachar3"
+          },
+          "extrachar4": {
+            "type": "string",
+            "description": "extrachar4"
+          },
+          "extrachar5": {
+            "type": "string",
+            "description": "extrachar5"
+          },
+          "extradate1": {
+            "type": "string",
+            "description": "extradate1",
+            "format": "date"
+          },
+          "extradate2": {
+            "type": "string",
+            "description": "extradate2",
+            "format": "date"
+          },
+          "extradate3": {
+            "type": "string",
+            "description": "extradate3",
+            "format": "date"
+          },
+          "extradatetime1": {
+            "type": "string",
+            "description": "extradatetime1",
+            "format": "date-time"
+          },
+          "extradatetime2": {
+            "type": "string",
+            "description": "extradatetime2",
+            "format": "date-time"
+          },
+          "extradatetime3": {
+            "type": "string",
+            "description": "extradatetime3",
+            "format": "date-time"
+          },
+          "extraint1": {
+            "type": "integer",
+            "description": "extraint1"
+          },
+          "extraint2": {
+            "type": "integer",
+            "description": "extraint2"
+          },
+          "extraint3": {
+            "type": "integer",
+            "description": "extraint3"
+          },
+          "extranum1": {
+            "type": "number",
+            "description": "extranum1",
+            "format": "number"
+          },
+          "extranum2": {
+            "type": "number",
+            "description": "extranum2",
+            "format": "number"
+          },
+          "extraqty1": {
+            "type": "number",
+            "description": "extraqty1",
+            "format": "number"
+          },
+          "fprowno": {
+            "type": "integer",
+            "description": "fprowno"
+          },
+          "guid": {
+            "type": "string",
+            "description": "guid"
+          },
+          "name": {
+            "type": "string",
+            "description": "name"
+          },
+          "numberingseries": {
+            "type": "string",
+            "description": "numberingseries"
+          },
+          "ordercriterion": {
+            "type": "string",
+            "description": "ordercriterion"
+          },
+          "quotationno": {
+            "type": "string",
+            "description": "quotationno"
+          },
+          "suppliercode": {
+            "type": "string",
+            "description": "suppliercode"
+          },
+          "createprpoconversionmlprm": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/createprpoconversionmlprm"
+            },
+            "description": "createprpoconversionmlprm"
+          }
+        },
+        "description": "createprpoconversionhdr",
+        "x-schemarequired": false
+      },
+      "createprpoconversionmlprm": {
+        "required": [
+          "orderquantity",
+          "pcauommult"
+        ],
+        "type": "object",
+        "properties": {
+          "customercode": {
+            "type": "string",
+            "description": "customercode"
+          },
+          "customername": {
+            "type": "string",
+            "description": "customername"
+          },
+          "dropshipid": {
+            "type": "string",
+            "description": "dropshipid"
+          },
+          "fromsuppliername": {
+            "type": "string",
+            "description": "fromsuppliername"
+          },
+          "itemdescription": {
+            "type": "string",
+            "description": "itemdescription"
+          },
+          "mlextraamount1": {
+            "type": "number",
+            "description": "mlextraamount1",
+            "format": "number"
+          },
+          "mlextrachar1": {
+            "type": "string",
+            "description": "mlextrachar1"
+          },
+          "mlextrachar2": {
+            "type": "string",
+            "description": "mlextrachar2"
+          },
+          "mlextrachar3": {
+            "type": "string",
+            "description": "mlextrachar3"
+          },
+          "mlextrachar4": {
+            "type": "string",
+            "description": "mlextrachar4"
+          },
+          "mlextrachar5": {
+            "type": "string",
+            "description": "mlextrachar5"
+          },
+          "mlextradate1": {
+            "type": "string",
+            "description": "mlextradate1",
+            "format": "date"
+          },
+          "mlextradate2": {
+            "type": "string",
+            "description": "mlextradate2",
+            "format": "date"
+          },
+          "mlextradate3": {
+            "type": "string",
+            "description": "mlextradate3",
+            "format": "date"
+          },
+          "mlextradatetime1": {
+            "type": "string",
+            "description": "mlextradatetime1",
+            "format": "date-time"
+          },
+          "mlextradatetime2": {
+            "type": "string",
+            "description": "mlextradatetime2",
+            "format": "date-time"
+          },
+          "mlextradatetime3": {
+            "type": "string",
+            "description": "mlextradatetime3",
+            "format": "date-time"
+          },
+          "mlextraint1": {
+            "type": "integer",
+            "description": "mlextraint1"
+          },
+          "mlextraint2": {
+            "type": "integer",
+            "description": "mlextraint2"
+          },
+          "mlextraint3": {
+            "type": "integer",
+            "description": "mlextraint3"
+          },
+          "mlextranum1": {
+            "type": "number",
+            "description": "mlextranum1",
+            "format": "number"
+          },
+          "mlextranum2": {
+            "type": "number",
+            "description": "mlextranum2",
+            "format": "number"
+          },
+          "mlextraqty1": {
+            "type": "number",
+            "description": "mlextraqty1",
+            "format": "number"
+          },
+          "modeflag": {
+            "type": "string",
+            "description": "modeflag"
+          },
+          "orderquantity": {
+            "type": "number",
+            "description": "orderquantity",
+            "format": "number"
+          },
+          "pcaitemcodemul": {
+            "type": "string",
+            "description": "pcaitemcodemul"
+          },
+          "pcauommult": {
+            "type": "string",
+            "description": "pcauommult"
+          },
+          "prauthqty": {
+            "type": "number",
+            "description": "prauthqty",
+            "format": "number"
+          },
+          "prbalanceqty": {
+            "type": "number",
+            "description": "prbalanceqty",
+            "format": "number"
+          },
+          "prcoveredqty": {
+            "type": "number",
+            "description": "prcoveredqty",
+            "format": "number"
+          },
+          "prcreatedat": {
+            "type": "string",
+            "description": "prcreatedat"
+          },
+          "prdate": {
+            "type": "string",
+            "description": "prdate",
+            "format": "date"
+          },
+          "preferredsuppliercode": {
+            "type": "string",
+            "description": "preferredsuppliercode"
+          },
+          "prlineno": {
+            "type": "integer",
+            "description": "prlineno"
+          },
+          "prneeddate": {
+            "type": "string",
+            "description": "prneeddate",
+            "format": "date"
+          },
+          "prno": {
+            "type": "string",
+            "description": "prno"
+          },
+          "prorigin": {
+            "type": "string",
+            "description": "prorigin"
+          },
+          "prquantity": {
+            "type": "number",
+            "description": "prquantity",
+            "format": "number"
+          },
+          "prscheduleno": {
+            "type": "integer",
+            "description": "prscheduleno"
+          },
+          "receiptat": {
+            "type": "string",
+            "description": "receiptat"
+          },
+          "requestedfor": {
+            "type": "string",
+            "description": "requestedfor"
+          },
+          "requesterid": {
+            "type": "string",
+            "description": "requesterid"
+          },
+          "stdsuppliercode": {
+            "type": "string",
+            "description": "stdsuppliercode"
+          },
+          "tosuppliername": {
+            "type": "string",
+            "description": "tosuppliername"
+          },
+          "uom": {
+            "type": "string",
+            "description": "uom"
+          },
+          "variantcode": {
+            "type": "string",
+            "description": "variantcode"
+          }
+        },
+        "description": "createprpoconversionmlpr_m",
+        "x-schemarequired": false
+      },
+      "createprpoconversionresponse": {
+        "type": "object",
+        "properties": {
+          "docno": {
+            "type": "string",
+            "description": "docno"
+          },
+          "responsemessage": {
+            "type": "string",
+            "description": "responsemessage"
+          }
+        },
+        "description": "createprpoconversionresponse",
+        "x-schemarequired": false
+      },
+      "apierror": {
+        "type": "object",
+        "properties": {
+          "instance": {
+            "type": "integer",
+            "description": "Instance Number",
+            "format": "int32"
+          },
+          "seqNo": {
+            "type": "integer",
+            "description": "Error Sequence Number",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "description": "Error ID",
+            "format": "int32"
+          },
+          "source": {
+            "type": "string",
+            "description": "Error Source"
+          },
+          "description": {
+            "type": "string",
+            "description": "Error Description"
+          },
+          "correctiveAction": {
+            "type": "string",
+            "description": "Error CorrectiveAction"
+          }
+        },
+        "description": "Error Object",
+        "x-schemarequired": false
+      },
+      "apierrors": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/apierror"
+        },
+        "description": "List of Error Object",
+        "x-schemarequired": false
+      }
+    },
+    "responses": {
+      "Error204": {
+        "description": "NO CONTENT"
+      },
+      "Error400": {
+        "description": "BAD DATA",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierrors"
+            }
+          }
+        }
+      },
+      "Error500": {
+        "description": "INVALID REQUEST",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierror"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "core_rids": {
+        "type": "oauth2",
+        "description": "Authorization header using the Bearer scheme. Example: \\\"Authorization: Bearer {token}\\\"",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "scopes": {
+              "rvw_impersonate": "User impersonation scope"
+            }
+          },
+          "clientCredentials": {
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "scopes": {
+              "rvw_nonimpersonate": "Service impersonation scope"
+            }
+          },
+          "authorizationCode": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "refreshUrl": "https://www.ramco.com/rvw",
+            "scopes": {
+              "rvw_anonymous": "User impersonation scope"
+            }
+          }
+        }
+      }
+    }
+  }
+}

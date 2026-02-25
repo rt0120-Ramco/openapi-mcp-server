@@ -1,137 +1,229 @@
-"""Unified MCP server with multiple OpenAPI specs using FastMCP"""
+"""Unified MCP server with multiple OpenAPI specs using FastMCP mount"""
 import json
 from pathlib import Path
 import httpx
 from fastmcp import FastMCP
 
 
-def add_server(main_mcp: FastMCP, sub_mcp: FastMCP, prefix: str = ""):
-    """
-    Custom add_server functionality to merge tools from sub_mcp into main_mcp.
-    
-    Args:
-        main_mcp: The main MCP server to add tools to
-        sub_mcp: The sub MCP server whose tools will be extracted
-        prefix: Optional prefix for tool names to avoid conflicts
-    """
-    # Access the internal tool manager
-    if hasattr(sub_mcp, '_tool_manager') and sub_mcp._tool_manager:
-        tool_manager = sub_mcp._tool_manager
-        
-        # Get all registered tools
-        if hasattr(tool_manager, '_tools'):
-            for tool_name, tool_func in tool_manager._tools.items():
-                # Add prefix if provided
-                new_tool_name = f"{prefix}_{tool_name}" if prefix else tool_name
-                
-                # Register tool in main MCP
-                if hasattr(main_mcp, '_tool_manager') and main_mcp._tool_manager:
-                    main_mcp._tool_manager._tools[new_tool_name] = tool_func
-                    print(f"  ✓ Registered tool: {new_tool_name}")
-    
-    # Also try to copy resources if they exist
-    if hasattr(sub_mcp, '_resource_manager') and hasattr(main_mcp, '_resource_manager'):
-        if hasattr(sub_mcp._resource_manager, '_resources'):
-            for resource_uri, resource_func in sub_mcp._resource_manager._resources.items():
-                main_mcp._resource_manager._resources[resource_uri] = resource_func
-                print(f"  ✓ Registered resource: {resource_uri}")
-
-
 def create_unified_server():
     """Create a unified MCP server with tools from all OpenAPI specs"""
     
     print("=" * 70)
-    print("🚀 Creating Unified MCP Server")
+    print("🚀 Creating Unified API Gateway with FastMCP Mount")
     print("=" * 70)
     
-    # Create the main unified MCP server
-    main_mcp = FastMCP("Unified-API-Gateway")
+    # Create the main gateway server
+    gateway = FastMCP(
+        name="Unified-API-Gateway",
+        instructions="Unified gateway for multiple Ramco ERP and test APIs"
+    )
     
     # ==================== JSONPlaceholder API ====================
     print("\n📦 Loading JSONPlaceholder API...")
-    spec_path_1 = Path(__file__).parent / "jsonplaceholder-openapi.json"
-    with open(spec_path_1) as f:
-        jsonplaceholder_spec = json.load(f)
+    spec_path = Path(__file__).parent / "specs" / "jsonplaceholder-openapi.json"
+    with open(spec_path) as f:
+        spec = json.load(f)
 
-    client_1 = httpx.AsyncClient(
+    client = httpx.AsyncClient(
         base_url="https://jsonplaceholder.typicode.com",
         verify=False,
         timeout=30.0,
         follow_redirects=True,
-        headers={
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-        }
+        headers={"Accept": "application/json", "Content-Type": "application/json"}
     )
 
-    mcp_1 = FastMCP.from_openapi(
-        openapi_spec=jsonplaceholder_spec,
-        client=client_1,
-        name="JSONPlaceholder"
+    jsonplaceholder_mcp = FastMCP.from_openapi(
+        openapi_spec=spec,
+        client=client,
+        name="JSONPlaceholder API"
     )
-    add_server(main_mcp, mcp_1, prefix="")
+    gateway.mount(jsonplaceholder_mcp, namespace="jsonplaceholder")
+    print("   ✓ Mounted with namespace: jsonplaceholder")
 
     # ==================== AuthorizeAssets API ====================
     print("\n📦 Loading AuthorizeAssets API...")
-    spec_path_2 = Path(__file__).parent / "authorizeassets.json"
-    with open(spec_path_2) as f:
-        authorizeassets_spec = json.load(f)
+    spec_path = Path(__file__).parent / "specs" / "authorizeassets.json"
+    with open(spec_path) as f:
+        spec = json.load(f)
 
-    client_2 = httpx.AsyncClient(
+    client = httpx.AsyncClient(
         base_url="https://erpenhdev.ramcouat.com/coreapiops/FA/ACAP_SER/v1",
         verify=False,
         timeout=30.0,
         follow_redirects=True,
-        headers={
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-        }
+        headers={"Accept": "application/json", "Content-Type": "application/json"}
     )
 
-    mcp_2 = FastMCP.from_openapi(
-        openapi_spec=authorizeassets_spec,
-        client=client_2,
-        name="AuthorizeAssets"
+    authorizeassets_mcp = FastMCP.from_openapi(
+        openapi_spec=spec,
+        client=client,
+        name="AuthorizeAssets API"
     )
-    add_server(main_mcp, mcp_2, prefix="")
+    gateway.mount(authorizeassets_mcp, namespace="assets")
+    print("   ✓ Mounted with namespace: assets")
 
     # ==================== ViewPurchaseRequest API ====================
     print("\n📦 Loading ViewPurchaseRequest API...")
-    spec_path_3 = Path(__file__).parent / "viewpurchaserequest.json"
-    with open(spec_path_3) as f:
-        viewpurchaserequest_spec = json.load(f)
+    spec_path = Path(__file__).parent / "specs" / "viewpurchaserequest.json"
+    with open(spec_path) as f:
+        spec = json.load(f)
 
-    client_3 = httpx.AsyncClient(
+    client = httpx.AsyncClient(
         base_url="https://erpenhdev.ramcouat.com/coreapiops/Purchase/Pur_Req_SER/v1",
         verify=False,
         timeout=30.0,
         follow_redirects=True,
-        headers={
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-        }
+        headers={"Accept": "application/json", "Content-Type": "application/json"}
     )
 
-    mcp_3 = FastMCP.from_openapi(
-        openapi_spec=viewpurchaserequest_spec,
-        client=client_3,
-        name="ViewPurchaseRequest"
+    viewpr_mcp = FastMCP.from_openapi(
+        openapi_spec=spec,
+        client=client,
+        name="ViewPurchaseRequest API"
     )
-    add_server(main_mcp, mcp_3, prefix="")
+    gateway.mount(viewpr_mcp, namespace="purchase_request")
+    print("   ✓ Mounted with namespace: purchase_request")
 
-    # Count total tools
-    tool_count = 0
-    if hasattr(main_mcp, '_tool_manager') and main_mcp._tool_manager:
-        if hasattr(main_mcp._tool_manager, '_tools'):
-            tool_count = len(main_mcp._tool_manager._tools)
+    # ==================== CreatePRPOConversion API ====================
+    print("\n📦 Loading CreatePRPOConversion API...")
+    spec_path = Path(__file__).parent / "specs" / "createPRPOConversion3.0.json"
+    with open(spec_path) as f:
+        spec = json.load(f)
+
+    client = httpx.AsyncClient(
+        base_url="https://erpenhdev.ramcouat.com/coreapiops/Purchase/PROConv_SER/v1",
+        verify=False,
+        timeout=30.0,
+        follow_redirects=True,
+        headers={"Accept": "application/json", "Content-Type": "application/json"}
+    )
+
+    createprpo_mcp = FastMCP.from_openapi(
+        openapi_spec=spec,
+        client=client,
+        name="CreatePRPOConversion API"
+    )
+    gateway.mount(createprpo_mcp, namespace="pr_po_conversion")
+    print("   ✓ Mounted with namespace: pr_po_conversion")
+
+    # ==================== GETSupplierItemAndLeadTimeDtls API ====================
+    print("\n📦 Loading GETSupplierItemAndLeadTimeDtls API...")
+    spec_path = Path(__file__).parent / "specs" / "GETSupplierItemAndLeadTimeDtls3.0.json"
+    with open(spec_path) as f:
+        spec = json.load(f)
+
+    client = httpx.AsyncClient(
+        base_url="https://erpenhdev.ramcouat.com/coreapiops/Purchase/SUPP_SER/v1",
+        verify=False,
+        timeout=30.0,
+        follow_redirects=True,
+        headers={"Accept": "application/json", "Content-Type": "application/json"}
+    )
+
+    supplier_item_mcp = FastMCP.from_openapi(
+        openapi_spec=spec,
+        client=client,
+        name="SupplierItemLeadTime API"
+    )
+    gateway.mount(supplier_item_mcp, namespace="supplier_item")
+    print("   ✓ Mounted with namespace: supplier_item")
+
+    # ==================== GETSupplierScoreCardDtls API ====================
+    print("\n📦 Loading GETSupplierScoreCardDtls API...")
+    spec_path = Path(__file__).parent / "specs" / "GETSupplierScoreCardDtls3.0.json"
+    with open(spec_path) as f:
+        spec = json.load(f)
+
+    client = httpx.AsyncClient(
+        base_url="https://erpenhdev.ramcouat.com/coreapiops/Purchase/SUPRAT_SER/v1",
+        verify=False,
+        timeout=30.0,
+        follow_redirects=True,
+        headers={"Accept": "application/json", "Content-Type": "application/json"}
+    )
+
+    supplier_scorecard_mcp = FastMCP.from_openapi(
+        openapi_spec=spec,
+        client=client,
+        name="SupplierScoreCard API"
+    )
+    gateway.mount(supplier_scorecard_mcp, namespace="supplier_scorecard")
+    print("   ✓ Mounted with namespace: supplier_scorecard")
+
+    # ==================== SearchBPO API ====================
+    print("\n📦 Loading SearchBPO API...")
+    spec_path = Path(__file__).parent / "specs" / "SearchBPO3.0.json"
+    with open(spec_path) as f:
+        spec = json.load(f)
+
+    client = httpx.AsyncClient(
+        base_url="https://erpenhdev.ramcouat.com/coreapiops/Purchase/BLPO_SER/v1",
+        verify=False,
+        timeout=30.0,
+        follow_redirects=True,
+        headers={"Accept": "application/json", "Content-Type": "application/json"}
+    )
+
+    searchbpo_mcp = FastMCP.from_openapi(
+        openapi_spec=spec,
+        client=client,
+        name="SearchBPO API"
+    )
+    gateway.mount(searchbpo_mcp, namespace="blanket_po")
+    print("   ✓ Mounted with namespace: blanket_po")
+
+    # ==================== ViewPO API ====================
+    print("\n📦 Loading ViewPO API...")
+    spec_path = Path(__file__).parent / "specs" / "ViewPO3.0.json"
+    with open(spec_path) as f:
+        spec = json.load(f)
+
+    client = httpx.AsyncClient(
+        base_url="https://erpenhdev.ramcouat.com/coreapiops/Purchase/PO_SER/v1",
+        verify=False,
+        timeout=30.0,
+        follow_redirects=True,
+        headers={"Accept": "application/json", "Content-Type": "application/json"}
+    )
+
+    viewpo_mcp = FastMCP.from_openapi(
+        openapi_spec=spec,
+        client=client,
+        name="ViewPO API"
+    )
+    gateway.mount(viewpo_mcp, namespace="purchase_order")
+    print("   ✓ Mounted with namespace: purchase_order")
+
+    # ==================== ViewReleaseSlip API ====================
+    print("\n📦 Loading ViewReleaseSlip API...")
+    spec_path = Path(__file__).parent / "specs" / "ViewReleaseSlip3.0.json"
+    with open(spec_path) as f:
+        spec = json.load(f)
+
+    client = httpx.AsyncClient(
+        base_url="https://erpenhdev.ramcouat.com/coreapiops/Purchase/PRS_SER/v1",
+        verify=False,
+        timeout=30.0,
+        follow_redirects=True,
+        headers={"Accept": "application/json", "Content-Type": "application/json"}
+    )
+
+    viewreleaseslip_mcp = FastMCP.from_openapi(
+        openapi_spec=spec,
+        client=client,
+        name="ViewReleaseSlip API"
+    )
+    gateway.mount(viewreleaseslip_mcp, namespace="release_slip")
+    print("   ✓ Mounted with namespace: release_slip")
     
     print("\n" + "=" * 70)
-    print(f"✅ Unified Server Ready with {tool_count} tools total!")
+    print(f"✅ Unified API Gateway Ready!")
+    print(f"   9 API servers mounted with namespaced tools")
     print("=" * 70)
     print(f"🌐 Server endpoint: http://localhost:8000/mcp")
     print("=" * 70)
     
-    return main_mcp
+    return gateway
 
 
 if __name__ == "__main__":

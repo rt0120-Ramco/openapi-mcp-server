@@ -1,0 +1,1711 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ViewPO",
+    "description": "ViewPO",
+    "version": "1",
+    "x-processname": "Purchase",
+    "x-componentname": "PO_SER",
+    "x-componentnamealias": "PO_SER",
+    "x-specid": 914,
+    "x-specname": "ViewPO",
+    "x-specdate": "2025-01-03T16:38:38.7400000",
+    "x-specversion": 1,
+    "x-includeprocessinroute": true,
+    "x-includecomponentinroute": true
+  },
+  "paths": {
+    "/ViewPO": {
+      "get": {
+        "summary": "ViewPO",
+        "description": "ViewPO",
+        "operationId": "ViewPO",
+        "responses": {
+          "200": {
+            "description": "ViewPO",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ViewPoHeader"
+                }
+              }
+            }
+          },
+          "204": {
+            "$ref": "#/components/responses/Error204"
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          }
+        },
+        "x-IsCustomCode": false,
+        "x-apipathoperationservicemap": {
+          "ServiceMapInfo": {
+            "ServiceID": 2006,
+            "ComponentName": "PO_SER",
+            "ServiceName": "povwmn_ser_fet_api",
+            "ServiceVersion": 1
+          },
+          "RequestBind": { },
+          "ResponseSchemaType": "Viewpoheader",
+          "ParameterMappings": {
+            "hdrseg": {
+              "ParameterMapInfo": [
+                {
+                  "ParameterName": "AmendmentNo",
+                  "IsRequired": false,
+                  "DataItemName": "app_amendmentno"
+                },
+                {
+                  "ParameterName": "Ponohdr",
+                  "IsRequired": false,
+                  "DataItemName": "ponohdr"
+                }
+              ]
+            }
+          },
+          "ResponseMappings": {
+            "actionResponse1": {
+              "ResponseMap": {
+                "MapID": "actionResponse1",
+                "DisplaySchemaType": "Viewpoheader",
+                "IsMultiSegment": false,
+                "SchemaVariable": "ViewPoHeader",
+                "SegmentHierachy": "hdrseg",
+                "SegmentName": "hdrseg",
+                "ActualSegmentName": "hdrseg"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "Decimal",
+                  "PropertyName": "AdditionalCharges",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "additionalcharge"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "AddressDetails",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "addrdet_vwpo"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "DateTime",
+                  "PropertyName": "AmendmentDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "amendmentdate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "DateTime",
+                  "PropertyName": "ApprovedDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "approveddate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "int",
+                  "PropertyName": "AmendmentNo",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_amendmentno"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Currency",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_currencycode"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Folder",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_folder"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Loi",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_loi"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "LoiToOrder",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_loitoorder"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "OwnTaxRegion",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_owntaxregion"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Pc",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_purcommstat"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "ReasonCode",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_reasoncode"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Remarks",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_remarks"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "SupplierTaxRegion",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_suppliertaxregion"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "Decimal",
+                  "PropertyName": "TotalValue",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_totalvalue"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "TransactionType",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_trantype"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "AuthorizationRemarks",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "authorisationremarksvw"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "Decimal",
+                  "PropertyName": "BaseCurrencyValue",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "basecurrvalue"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Bscotype",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "bscotype"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Buyer",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "buyerhdr"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Hold",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "chkbx2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Desc",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "classcodedesc"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Descmlt",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "classcodedescmlt"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Classification",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "classfyctn_vew"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "ClassificationDesc",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "classfyctn_vew_desc"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "ContactPerson",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "contactperson"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "CreatedBy",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "createdby_276_n"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "DateTime",
+                  "PropertyName": "CreatedDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "createddate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "Decimal",
+                  "PropertyName": "ExchangeRate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "exchangerate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "FolderDescription",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "folderdescription_vw"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "PoCreatedAt",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hidden_control2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Imports",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "imports"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "LastModifiedBy",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "lastmodby_276_n"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "DateTime",
+                  "PropertyName": "LastModifiedDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "lastmodifieddate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Notes",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "notes"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "ChangeOrderStatusTo",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "orderstatushdr"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "OrdRecpDetDcub",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ord_recp_det_dcub"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "ChangePaymentStatusTo",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "paymentstatus"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "DateTime",
+                  "PropertyName": "PoDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "podate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Ponohdr",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ponohdr"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Ponomlt",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ponomlt"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "Decimal",
+                  "PropertyName": "PoValueInclDiscounts",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "povalue"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "PrintLanguage",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "printlanguage"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "ReasonCodeml",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "reasoncodeml"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "ReasonForReturn",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "reasonforreturnvw"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "ReasonCodeForAmendment",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "reason_code_po"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "ReasonDesc",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "reason_desc_po"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "RefQuotationNo",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "refdocnoml"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "ShipFromId",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "shipfromidvw"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Status",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "status"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "SubClassification",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "subclassfyctn_vew"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "SubClassificationDesc",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "subclassfyctn_vew_desc"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "SupplierCode",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "supplier_code"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "TaxRegnNo",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "taxregnno"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Name",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "tosuppliername"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "Trantype2",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "trantype2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "VwPomainPonoOuGuid",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "vwpomain_pono_ou_guid"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "VwDocKey",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "vw_doc_key"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Viewpoheader",
+                  "DataType": "String",
+                  "PropertyName": "WorkflowStatus",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "vw_wf_status"
+                }
+              ]
+            },
+            "actionResponse2": {
+              "ResponseMap": {
+                "MapID": "actionResponse2",
+                "SchemaHierarchy": "Viewpoheader",
+                "DisplaySchemaType": "Viewpodetails",
+                "IsMultiSegment": false,
+                "SchemaVariable": "viewpoheader.ViewPoDetails",
+                "SegmentHierachy": "_grd_rmseg",
+                "SegmentName": "_grd_rmseg",
+                "ActualSegmentName": "grd_rmseg"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "AcceptedQty",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "accptqtyml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "AccountingUnit",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "accunitml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "AdhocItemClass",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "adhocitemclassml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "Comments",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_comment"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "Cost",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_cost"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "HsnsacNo",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_hsnsacno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "Desc",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_itemdescriptionml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "ReceivedQty",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_receivedqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "int",
+                  "PropertyName": "RefDocLineNo",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_refdoclinenumber"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "SupplierItemDesc",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_supp_item_desc"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "Uom",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "app_uommult"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "BalanceQty",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "balqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "BasicValue",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "basicvalue"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "BilledAmount",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "billedamount"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "BilledQty",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "billedqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "DrawingNo",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "drawingno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "DrawingRevisionNo",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "drawingrevno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "ItemCode",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "item_codeml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "int",
+                  "PropertyName": "LineNo",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "line_no"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "MatchedAmount",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "matchedamount"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "MatchedQty",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "matchedqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "Per",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "mltper"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "MovedQty",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "moved_qty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "DateTime",
+                  "PropertyName": "NeedDate",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "needdateml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "Projectdescription",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "po_project_description"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "TaskCode",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "po_taskcode"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "TaskDesc",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "po_task_desc"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "WbsId",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "po_wbsid"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "Projectcode",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "project_code"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "Projectou",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "project_ou"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "Quantity",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "qtyml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "ReturnedQty",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "qty_return"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "ReceiptAt",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "receiptatoumlt"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "int",
+                  "PropertyName": "RefQuotationLineNo",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "refqtnlinenoml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "RefDocNo",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "refsono"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "RejectedQty",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "rejctqtyml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "ScheduleType",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sched_typeml_view"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "SupplierItemRef",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "supp_item_ref"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "TotalValue",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "totalvalueml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "VariantCode",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "variantno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Viewpodetails",
+                  "DataType": "String",
+                  "PropertyName": "WarehouseCode",
+                  "SegmentName": "_grd_rmseg",
+                  "ActualSegmentName": "grd_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "warehouse_code_mul"
+                }
+              ]
+            }
+          }
+        },
+        "x-ispaginationenabled": false
+      },
+      "parameters": [
+        {
+          "name": "AmendmentNo",
+          "in": "query",
+          "description": "AmendmentNo",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "Ponohdr",
+          "in": "query",
+          "description": "Ponohdr",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "context-lang-id",
+          "in": "header",
+          "description": "Language Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "context-ou-id",
+          "in": "header",
+          "description": "Orgnz Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "context-role-name",
+          "in": "header",
+          "description": "Role Id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "ViewPoDetails": {
+        "type": "object",
+        "properties": {
+          "AcceptedQty": {
+            "type": "number",
+            "description": "AcceptedQty",
+            "format": "number"
+          },
+          "AccountingUnit": {
+            "type": "string",
+            "description": "AccountingUnit"
+          },
+          "AdhocItemClass": {
+            "type": "string",
+            "description": "AdhocItemClass"
+          },
+          "BalanceQty": {
+            "type": "number",
+            "description": "BalanceQty",
+            "format": "number"
+          },
+          "BasicValue": {
+            "type": "number",
+            "description": "BasicValue",
+            "format": "number"
+          },
+          "BilledAmount": {
+            "type": "number",
+            "description": "BilledAmount",
+            "format": "number"
+          },
+          "BilledQty": {
+            "type": "number",
+            "description": "BilledQty",
+            "format": "number"
+          },
+          "Comments": {
+            "type": "string",
+            "description": "Comments"
+          },
+          "Cost": {
+            "type": "number",
+            "description": "Cost",
+            "format": "number"
+          },
+          "Desc": {
+            "type": "string",
+            "description": "Desc"
+          },
+          "DrawingNo": {
+            "type": "string",
+            "description": "DrawingNo"
+          },
+          "DrawingRevisionNo": {
+            "type": "string",
+            "description": "DrawingRevisionNo"
+          },
+          "HsnsacNo": {
+            "type": "string",
+            "description": "HsnsacNo"
+          },
+          "ItemCode": {
+            "type": "string",
+            "description": "ItemCode"
+          },
+          "LineNo": {
+            "type": "integer",
+            "description": "LineNo"
+          },
+          "MatchedAmount": {
+            "type": "number",
+            "description": "MatchedAmount",
+            "format": "number"
+          },
+          "MatchedQty": {
+            "type": "number",
+            "description": "MatchedQty",
+            "format": "number"
+          },
+          "MovedQty": {
+            "type": "number",
+            "description": "MovedQty",
+            "format": "number"
+          },
+          "NeedDate": {
+            "type": "string",
+            "description": "NeedDate",
+            "format": "date"
+          },
+          "Per": {
+            "type": "number",
+            "description": "Per",
+            "format": "number"
+          },
+          "Projectcode": {
+            "type": "string",
+            "description": "Projectcode"
+          },
+          "Projectdescription": {
+            "type": "string",
+            "description": "Projectdescription"
+          },
+          "Projectou": {
+            "type": "string",
+            "description": "Projectou"
+          },
+          "Quantity": {
+            "type": "number",
+            "description": "Quantity",
+            "format": "number"
+          },
+          "ReceiptAt": {
+            "type": "string",
+            "description": "ReceiptAt"
+          },
+          "ReceivedQty": {
+            "type": "number",
+            "description": "ReceivedQty",
+            "format": "number"
+          },
+          "RefDocLineNo": {
+            "type": "integer",
+            "description": "RefDocLineNo"
+          },
+          "RefDocNo": {
+            "type": "string",
+            "description": "RefDocNo"
+          },
+          "RefQuotationLineNo": {
+            "type": "integer",
+            "description": "RefQuotationLineNo"
+          },
+          "RejectedQty": {
+            "type": "number",
+            "description": "RejectedQty",
+            "format": "number"
+          },
+          "ReturnedQty": {
+            "type": "number",
+            "description": "ReturnedQty",
+            "format": "number"
+          },
+          "ScheduleType": {
+            "type": "string",
+            "description": "ScheduleType"
+          },
+          "SupplierItemDesc": {
+            "type": "string",
+            "description": "SupplierItemDesc"
+          },
+          "SupplierItemRef": {
+            "type": "string",
+            "description": "SupplierItemRef"
+          },
+          "TaskCode": {
+            "type": "string",
+            "description": "TaskCode"
+          },
+          "TaskDesc": {
+            "type": "string",
+            "description": "TaskDesc"
+          },
+          "TotalValue": {
+            "type": "number",
+            "description": "TotalValue",
+            "format": "number"
+          },
+          "Uom": {
+            "type": "string",
+            "description": "Uom"
+          },
+          "VariantCode": {
+            "type": "string",
+            "description": "VariantCode"
+          },
+          "WarehouseCode": {
+            "type": "string",
+            "description": "WarehouseCode"
+          },
+          "WbsId": {
+            "type": "string",
+            "description": "WbsId"
+          }
+        },
+        "description": "ViewPoDetails",
+        "x-schemarequired": false
+      },
+      "ViewPoHeader": {
+        "required": [
+          "AmendmentNo",
+          "Ponohdr"
+        ],
+        "type": "object",
+        "properties": {
+          "AdditionalCharges": {
+            "type": "number",
+            "description": "AdditionalCharges",
+            "format": "number"
+          },
+          "AddressDetails": {
+            "type": "string",
+            "description": "AddressDetails"
+          },
+          "AmendmentDate": {
+            "type": "string",
+            "description": "AmendmentDate",
+            "format": "date"
+          },
+          "AmendmentNo": {
+            "type": "integer",
+            "description": "AmendmentNo"
+          },
+          "ApprovedDate": {
+            "type": "string",
+            "description": "ApprovedDate",
+            "format": "date"
+          },
+          "AuthorizationRemarks": {
+            "type": "string",
+            "description": "AuthorizationRemarks"
+          },
+          "BaseCurrencyValue": {
+            "type": "number",
+            "description": "BaseCurrencyValue",
+            "format": "number"
+          },
+          "Bscotype": {
+            "type": "string",
+            "description": "Bscotype"
+          },
+          "Buyer": {
+            "type": "string",
+            "description": "Buyer"
+          },
+          "ChangeOrderStatusTo": {
+            "type": "string",
+            "description": "ChangeOrderStatusTo"
+          },
+          "ChangePaymentStatusTo": {
+            "type": "string",
+            "description": "ChangePaymentStatusTo"
+          },
+          "Classification": {
+            "type": "string",
+            "description": "Classification"
+          },
+          "ClassificationDesc": {
+            "type": "string",
+            "description": "ClassificationDesc"
+          },
+          "ContactPerson": {
+            "type": "string",
+            "description": "ContactPerson"
+          },
+          "CreatedBy": {
+            "type": "string",
+            "description": "CreatedBy"
+          },
+          "CreatedDate": {
+            "type": "string",
+            "description": "CreatedDate",
+            "format": "date"
+          },
+          "Currency": {
+            "type": "string",
+            "description": "Currency"
+          },
+          "Desc": {
+            "type": "string",
+            "description": "Desc"
+          },
+          "Descmlt": {
+            "type": "string",
+            "description": "Descmlt"
+          },
+          "ExchangeRate": {
+            "type": "number",
+            "description": "ExchangeRate",
+            "format": "number"
+          },
+          "Folder": {
+            "type": "string",
+            "description": "Folder"
+          },
+          "FolderDescription": {
+            "type": "string",
+            "description": "FolderDescription"
+          },
+          "Hold": {
+            "type": "string",
+            "description": "Hold"
+          },
+          "Imports": {
+            "type": "string",
+            "description": "Imports"
+          },
+          "LastModifiedBy": {
+            "type": "string",
+            "description": "LastModifiedBy"
+          },
+          "LastModifiedDate": {
+            "type": "string",
+            "description": "LastModifiedDate",
+            "format": "date"
+          },
+          "Loi": {
+            "type": "string",
+            "description": "Loi"
+          },
+          "LoiToOrder": {
+            "type": "string",
+            "description": "LoiToOrder"
+          },
+          "Name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "Notes": {
+            "type": "string",
+            "description": "Notes"
+          },
+          "OrdRecpDetDcub": {
+            "type": "string",
+            "description": "OrdRecpDetDcub"
+          },
+          "OwnTaxRegion": {
+            "type": "string",
+            "description": "OwnTaxRegion"
+          },
+          "Pc": {
+            "type": "string",
+            "description": "Pc"
+          },
+          "PoCreatedAt": {
+            "type": "string",
+            "description": "PoCreatedAt"
+          },
+          "PoDate": {
+            "type": "string",
+            "description": "PoDate",
+            "format": "date"
+          },
+          "Ponohdr": {
+            "type": "string",
+            "description": "Ponohdr"
+          },
+          "Ponomlt": {
+            "type": "string",
+            "description": "Ponomlt"
+          },
+          "PoValueInclDiscounts": {
+            "type": "number",
+            "description": "PoValueInclDiscounts",
+            "format": "number"
+          },
+          "PrintLanguage": {
+            "type": "string",
+            "description": "PrintLanguage"
+          },
+          "ReasonCode": {
+            "type": "string",
+            "description": "ReasonCode"
+          },
+          "ReasonCodeForAmendment": {
+            "type": "string",
+            "description": "ReasonCodeForAmendment"
+          },
+          "ReasonCodeml": {
+            "type": "string",
+            "description": "ReasonCodeml"
+          },
+          "ReasonDesc": {
+            "type": "string",
+            "description": "ReasonDesc"
+          },
+          "ReasonForReturn": {
+            "type": "string",
+            "description": "ReasonForReturn"
+          },
+          "RefQuotationNo": {
+            "type": "string",
+            "description": "RefQuotationNo"
+          },
+          "Remarks": {
+            "type": "string",
+            "description": "Remarks"
+          },
+          "ShipFromId": {
+            "type": "string",
+            "description": "ShipFromId"
+          },
+          "Status": {
+            "type": "string",
+            "description": "Status"
+          },
+          "SubClassification": {
+            "type": "string",
+            "description": "SubClassification"
+          },
+          "SubClassificationDesc": {
+            "type": "string",
+            "description": "SubClassificationDesc"
+          },
+          "SupplierCode": {
+            "type": "string",
+            "description": "SupplierCode"
+          },
+          "SupplierTaxRegion": {
+            "type": "string",
+            "description": "SupplierTaxRegion"
+          },
+          "TaxRegnNo": {
+            "type": "string",
+            "description": "TaxRegnNo"
+          },
+          "TotalValue": {
+            "type": "number",
+            "description": "TotalValue",
+            "format": "number"
+          },
+          "TransactionType": {
+            "type": "string",
+            "description": "TransactionType"
+          },
+          "Trantype2": {
+            "type": "string",
+            "description": "Trantype2"
+          },
+          "VwDocKey": {
+            "type": "string",
+            "description": "VwDocKey"
+          },
+          "VwPomainPonoOuGuid": {
+            "type": "string",
+            "description": "VwPomainPonoOuGuid"
+          },
+          "WorkflowStatus": {
+            "type": "string",
+            "description": "WorkflowStatus"
+          },
+          "ViewPoDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ViewPoDetails"
+            },
+            "description": "ViewPoDetails"
+          }
+        },
+        "description": "ViewPoHeader",
+        "x-schemarequired": false
+      },
+      "apierror": {
+        "type": "object",
+        "properties": {
+          "instance": {
+            "type": "integer",
+            "description": "Instance Number",
+            "format": "int32"
+          },
+          "seqNo": {
+            "type": "integer",
+            "description": "Error Sequence Number",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "description": "Error ID",
+            "format": "int32"
+          },
+          "source": {
+            "type": "string",
+            "description": "Error Source"
+          },
+          "description": {
+            "type": "string",
+            "description": "Error Description"
+          },
+          "correctiveAction": {
+            "type": "string",
+            "description": "Error CorrectiveAction"
+          }
+        },
+        "description": "Error Object",
+        "x-schemarequired": false
+      },
+      "apierrors": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/apierror"
+        },
+        "description": "List of Error Object",
+        "x-schemarequired": false
+      }
+    },
+    "responses": {
+      "Error204": {
+        "description": "NO CONTENT"
+      },
+      "Error400": {
+        "description": "BAD DATA",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierrors"
+            }
+          }
+        }
+      },
+      "Error500": {
+        "description": "INVALID REQUEST",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierror"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "core_rids": {
+        "type": "oauth2",
+        "description": "Authorization header using the Bearer scheme. Example: \\\"Authorization: Bearer {token}\\\"",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "scopes": {
+              "rvw_impersonate": "User impersonation scope"
+            }
+          },
+          "clientCredentials": {
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "scopes": {
+              "rvw_nonimpersonate": "Service impersonation scope"
+            }
+          },
+          "authorizationCode": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "refreshUrl": "https://www.ramco.com/rvw",
+            "scopes": {
+              "rvw_anonymous": "User impersonation scope"
+            }
+          }
+        }
+      }
+    }
+  }
+}

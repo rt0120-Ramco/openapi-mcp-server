@@ -1,0 +1,986 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "GETSupplierScoreCardDtls",
+    "description": "GETSupplierScoreCardDtls",
+    "version": "1",
+    "x-processname": "Purchase",
+    "x-componentname": "SUPRAT_SER",
+    "x-componentnamealias": "SRL",
+    "x-specid": 5153,
+    "x-specname": "GETSupplierScoreCardDtls",
+    "x-specdate": "2025-11-10T14:54:43.5370000+05:30",
+    "x-specversion": 1,
+    "x-includeprocessinroute": true,
+    "x-includecomponentinroute": true
+  },
+  "paths": {
+    "/GETSupplierScoreCardDtls": {
+      "get": {
+        "summary": "GETSupplierScoreCardDtls",
+        "description": "GETSupplierScoreCardDtls",
+        "operationId": "GETSupplierScoreCardDtls",
+        "responses": {
+          "200": {
+            "description": "GETSupplierScoreCardDtls",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/scr_RMSeg"
+                  },
+                  "x-schemcategory": "PRS",
+                  "x-schemarequired": false
+                }
+              }
+            }
+          },
+          "204": {
+            "$ref": "#/components/responses/Error204"
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          }
+        },
+        "x-IsCustomCode": false,
+        "x-canbechallenged": false,
+        "x-IsCacheEnabled": false,
+        "x-ispublish": false,
+        "x-apipathoperationservicemap": {
+          "ServiceMapInfo": {
+            "ServiceID": 5418,
+            "ComponentName": "SUPRAT_SER",
+            "ServiceName": "srat_oscvw_ser_vwsc_api",
+            "ServiceVersion": 1
+          },
+          "RequestBind": { },
+          "ResponseSchemaType": "List<Scr_rmseg>",
+          "ParameterMappings": {
+            "HSeg": {
+              "ParameterMapInfo": [
+                {
+                  "ParameterName": "Extraamount1",
+                  "IsRequired": false,
+                  "DataItemName": "extra_amount1"
+                },
+                {
+                  "ParameterName": "Extrachar1",
+                  "IsRequired": false,
+                  "DataItemName": "srl_extra_char1"
+                },
+                {
+                  "ParameterName": "Extrachar2",
+                  "IsRequired": false,
+                  "DataItemName": "srl_extra_char2"
+                },
+                {
+                  "ParameterName": "Extrachar3",
+                  "IsRequired": false,
+                  "DataItemName": "extra_char3"
+                },
+                {
+                  "ParameterName": "Extrachar4",
+                  "IsRequired": false,
+                  "DataItemName": "extra_char4"
+                },
+                {
+                  "ParameterName": "Extrachar5",
+                  "IsRequired": false,
+                  "DataItemName": "extra_char5"
+                },
+                {
+                  "ParameterName": "Extradate1",
+                  "IsRequired": false,
+                  "DataItemName": "srl_extra_date1"
+                },
+                {
+                  "ParameterName": "Extradate2",
+                  "IsRequired": false,
+                  "DataItemName": "srl_extra_date2"
+                },
+                {
+                  "ParameterName": "Extradate3",
+                  "IsRequired": false,
+                  "DataItemName": "extra_date3"
+                },
+                {
+                  "ParameterName": "Extradatetime1",
+                  "IsRequired": false,
+                  "DataItemName": "extra_datetime1"
+                },
+                {
+                  "ParameterName": "Extradatetime2",
+                  "IsRequired": false,
+                  "DataItemName": "extra_datetime2"
+                },
+                {
+                  "ParameterName": "Extradatetime3",
+                  "IsRequired": false,
+                  "DataItemName": "extra_datetime3"
+                },
+                {
+                  "ParameterName": "Extraint1",
+                  "IsRequired": false,
+                  "DataItemName": "extra_int1"
+                },
+                {
+                  "ParameterName": "Extraint2",
+                  "IsRequired": false,
+                  "DataItemName": "extra_int2"
+                },
+                {
+                  "ParameterName": "Extraint3",
+                  "IsRequired": false,
+                  "DataItemName": "extra_int3"
+                },
+                {
+                  "ParameterName": "Extranum1",
+                  "IsRequired": false,
+                  "DataItemName": "extra_num1"
+                },
+                {
+                  "ParameterName": "Extranum2",
+                  "IsRequired": false,
+                  "DataItemName": "extra_num2"
+                },
+                {
+                  "ParameterName": "Extraqty1",
+                  "IsRequired": false,
+                  "DataItemName": "extra_qty1"
+                },
+                {
+                  "ParameterName": "Hdnguid",
+                  "IsRequired": false,
+                  "DataItemName": "hdnguid"
+                },
+                {
+                  "ParameterName": "Selectratingdate",
+                  "IsRequired": false,
+                  "DataItemName": "srl_selectratingdate"
+                },
+                {
+                  "ParameterName": "Suppliercode",
+                  "IsRequired": false,
+                  "DataItemName": "suppliercode1"
+                }
+              ]
+            }
+          },
+          "ResponseMappings": {
+            "actionResponse1": {
+              "ResponseMap": {
+                "MapID": "actionResponse1",
+                "DisplaySchemaType": "Scr_rmseg",
+                "IsMultiSegment": false,
+                "SchemaVariable": "res_getsupplierscorecarddtls",
+                "SegmentHierachy": "_scr_rmseg",
+                "SegmentName": "_scr_rmseg",
+                "ActualSegmentName": "scr_RMSeg"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Deliveryindex",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "deliveryindex"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Mlextraamount1",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_amount1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "String",
+                  "PropertyName": "Mlextrachar1",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "String",
+                  "PropertyName": "Mlextrachar2",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "String",
+                  "PropertyName": "Mlextrachar3",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char3"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "String",
+                  "PropertyName": "Mlextrachar4",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char4"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "String",
+                  "PropertyName": "Mlextrachar5",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char5"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "DateTime",
+                  "PropertyName": "Mlextradate1",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "DateTime",
+                  "PropertyName": "Mlextradate2",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "DateTime",
+                  "PropertyName": "Mlextradate3",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date3"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "datetime",
+                  "PropertyName": "Mlextradatetime1",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "datetime",
+                  "PropertyName": "Mlextradatetime2",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "datetime",
+                  "PropertyName": "Mlextradatetime3",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime3"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "int",
+                  "PropertyName": "Mlextraint1",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "int",
+                  "PropertyName": "Mlextraint2",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "int",
+                  "PropertyName": "Mlextraint3",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int3"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Mlextranum1",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_num1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Mlextranum2",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_num2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Mlextraqty1",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_qty1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Ontimeperfindex",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ontimeperfindex"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Overallscore",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "overallscore"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Priceindex",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "priceindex"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Qualityindex",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "qualityindex"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Supplierratingscore",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "srl_supplierratingscore"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "String",
+                  "PropertyName": "Supplierratingstatus",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "srl_supplierratingstatus"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "String",
+                  "PropertyName": "Suppliercode2",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "suppliercode2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "String",
+                  "PropertyName": "Suppliername2",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "suppliername2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Scr_rmseg",
+                  "DataType": "Decimal",
+                  "PropertyName": "Userdefinedindex",
+                  "SegmentName": "_scr_rmseg",
+                  "ActualSegmentName": "scr_RMSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "userdefinedindex"
+                }
+              ]
+            }
+          }
+        },
+        "x-ispaginationenabled": false
+      },
+      "parameters": [
+        {
+          "name": "Selectratingdate",
+          "in": "query",
+          "description": "Selectratingdate",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "date",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Suppliercode",
+          "in": "query",
+          "description": "Suppliercode\r",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "context-lang-id",
+          "in": "header",
+          "description": "Language Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "context-ou-id",
+          "in": "header",
+          "description": "Orgnz Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "context-role-name",
+          "in": "header",
+          "description": "Role Id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "Extraamount1",
+          "in": "query",
+          "description": "Extraamount1",
+          "schema": {
+            "type": "number",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extrachar1",
+          "in": "query",
+          "description": "Extrachar1",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extrachar2",
+          "in": "query",
+          "description": "Extrachar2",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extrachar3",
+          "in": "query",
+          "description": "Extrachar3",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extrachar4",
+          "in": "query",
+          "description": "Extrachar4",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extrachar5",
+          "in": "query",
+          "description": "Extrachar5",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradate1",
+          "in": "query",
+          "description": "Extradate1",
+          "schema": {
+            "type": "string",
+            "format": "date",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradate2",
+          "in": "query",
+          "description": "Extradate2",
+          "schema": {
+            "type": "string",
+            "format": "date",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradate3",
+          "in": "query",
+          "description": "Extradate3",
+          "schema": {
+            "type": "string",
+            "format": "date",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradatetime1",
+          "in": "query",
+          "description": "Extradatetime1",
+          "schema": {
+            "type": "string",
+            "format": "date-time",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradatetime2",
+          "in": "query",
+          "description": "Extradatetime2",
+          "schema": {
+            "type": "string",
+            "format": "date-time",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradatetime3",
+          "in": "query",
+          "description": "Extradatetime3",
+          "schema": {
+            "type": "string",
+            "format": "date-time",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extraint1",
+          "in": "query",
+          "description": "Extraint1",
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extraint2",
+          "in": "query",
+          "description": "Extraint2",
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extraint3",
+          "in": "query",
+          "description": "Extraint3",
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extranum1",
+          "in": "query",
+          "description": "Extranum1",
+          "schema": {
+            "type": "number",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extranum2",
+          "in": "query",
+          "description": "Extranum2",
+          "schema": {
+            "type": "number",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extraqty1",
+          "in": "query",
+          "description": "Extraqty1",
+          "schema": {
+            "type": "number",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hdnguid",
+          "in": "query",
+          "description": "Hdnguid",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "apierror": {
+        "type": "object",
+        "properties": {
+          "instance": {
+            "type": "integer",
+            "description": "Instance Number",
+            "format": "int32"
+          },
+          "seqNo": {
+            "type": "integer",
+            "description": "Error Sequence Number",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "description": "Error ID",
+            "format": "int32"
+          },
+          "source": {
+            "type": "string",
+            "description": "Error Source"
+          },
+          "description": {
+            "type": "string",
+            "description": "Error Description"
+          },
+          "correctiveAction": {
+            "type": "string",
+            "description": "Error CorrectiveAction"
+          }
+        },
+        "description": "Error Object",
+        "x-schemarequired": false
+      },
+      "scr_RMSeg": {
+        "type": "object",
+        "properties": {
+          "Deliveryindex": {
+            "type": "number",
+            "description": "Deliveryindex",
+            "format": "number"
+          },
+          "Mlextraamount1": {
+            "type": "number",
+            "description": "Mlextraamount1",
+            "format": "number"
+          },
+          "Mlextrachar1": {
+            "type": "string",
+            "description": "Mlextrachar1"
+          },
+          "Mlextrachar2": {
+            "type": "string",
+            "description": "Mlextrachar2"
+          },
+          "Mlextrachar3": {
+            "type": "string",
+            "description": "Mlextrachar3"
+          },
+          "Mlextrachar4": {
+            "type": "string",
+            "description": "Mlextrachar4"
+          },
+          "Mlextrachar5": {
+            "type": "string",
+            "description": "Mlextrachar5"
+          },
+          "Mlextradate1": {
+            "type": "string",
+            "description": "Mlextradate1",
+            "format": "date"
+          },
+          "Mlextradate2": {
+            "type": "string",
+            "description": "Mlextradate2",
+            "format": "date"
+          },
+          "Mlextradate3": {
+            "type": "string",
+            "description": "Mlextradate3",
+            "format": "date"
+          },
+          "Mlextradatetime1": {
+            "type": "string",
+            "description": "Mlextradatetime1",
+            "format": "date-time"
+          },
+          "Mlextradatetime2": {
+            "type": "string",
+            "description": "Mlextradatetime2",
+            "format": "date-time"
+          },
+          "Mlextradatetime3": {
+            "type": "string",
+            "description": "Mlextradatetime3",
+            "format": "date-time"
+          },
+          "Mlextraint1": {
+            "type": "integer",
+            "description": "Mlextraint1"
+          },
+          "Mlextraint2": {
+            "type": "integer",
+            "description": "Mlextraint2"
+          },
+          "Mlextraint3": {
+            "type": "integer",
+            "description": "Mlextraint3"
+          },
+          "Mlextranum1": {
+            "type": "number",
+            "description": "Mlextranum1",
+            "format": "number"
+          },
+          "Mlextranum2": {
+            "type": "number",
+            "description": "Mlextranum2",
+            "format": "number"
+          },
+          "Mlextraqty1": {
+            "type": "number",
+            "description": "Mlextraqty1",
+            "format": "number"
+          },
+          "Ontimeperfindex": {
+            "type": "number",
+            "description": "Ontimeperfindex",
+            "format": "number"
+          },
+          "Overallscore": {
+            "type": "number",
+            "description": "Overallscore",
+            "format": "number"
+          },
+          "Priceindex": {
+            "type": "number",
+            "description": "Priceindex",
+            "format": "number"
+          },
+          "Qualityindex": {
+            "type": "number",
+            "description": "Qualityindex",
+            "format": "number"
+          },
+          "Suppliercode2": {
+            "type": "string",
+            "description": "Suppliercode2"
+          },
+          "Suppliername2": {
+            "type": "string",
+            "description": "Suppliername2"
+          },
+          "Supplierratingscore": {
+            "type": "number",
+            "description": "Supplierratingscore",
+            "format": "number"
+          },
+          "Supplierratingstatus": {
+            "type": "string",
+            "description": "Supplierratingstatus"
+          },
+          "Userdefinedindex": {
+            "type": "number",
+            "description": "Userdefinedindex",
+            "format": "number"
+          }
+        },
+        "description": "scr_RMSeg",
+        "x-schemarequired": false
+      },
+      "apierrors": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/apierror"
+        },
+        "description": "List of Error Object",
+        "x-schemarequired": false
+      }
+    },
+    "responses": {
+      "Error204": {
+        "description": "NO CONTENT"
+      },
+      "Error400": {
+        "description": "BAD DATA",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierrors"
+            }
+          }
+        }
+      },
+      "Error500": {
+        "description": "INVALID REQUEST",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierror"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "core_rids": {
+        "type": "oauth2",
+        "description": "Authorization header using the Bearer scheme. Example: \\\"Authorization: Bearer {token}\\\"",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "scopes": {
+              "rvw_impersonate": "User impersonation scope"
+            }
+          },
+          "clientCredentials": {
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "scopes": {
+              "rvw_nonimpersonate": "Service impersonation scope"
+            }
+          },
+          "authorizationCode": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "refreshUrl": "https://www.ramco.com/rvw",
+            "scopes": {
+              "rvw_anonymous": "User impersonation scope"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1485 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ViewReleaseSlip",
+    "description": "ViewReleaseSlip",
+    "version": "1",
+    "x-processname": "Purchase",
+    "x-componentname": "PRS_SER",
+    "x-componentnamealias": "PRS_SER",
+    "x-specid": 683,
+    "x-specname": "ViewReleaseSlip",
+    "x-specdate": "2025-06-05T18:16:31.5630000+05:30",
+    "x-specversion": 1,
+    "x-includeprocessinroute": true,
+    "x-includecomponentinroute": true
+  },
+  "paths": {
+    "/ViewReleaseSlip": {
+      "get": {
+        "summary": "ReleaseshipDetails",
+        "description": "ReleaseshipDetails",
+        "operationId": "ReleaseshipDetails",
+        "responses": {
+          "200": {
+            "description": "ViewReleaseSlip",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReleaseshipHeader"
+                }
+              }
+            }
+          },
+          "204": {
+            "$ref": "#/components/responses/Error204"
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          }
+        },
+        "x-IsCustomCode": false,
+        "x-canbechallenged": false,
+        "x-IsCacheEnabled": false,
+        "x-ispublish": false,
+        "x-apipathoperationservicemap": {
+          "ServiceMapInfo": {
+            "ServiceID": 1755,
+            "ComponentName": "PRS_SER",
+            "ServiceName": "prsVRS_ser_Fet_api",
+            "ServiceVersion": 1
+          },
+          "RequestBind": { },
+          "ResponseSchemaType": "Releaseshipheader",
+          "ParameterMappings": {
+            "hdrseg": {
+              "ParameterMapInfo": [
+                {
+                  "ParameterName": "ReleaseSlipNo",
+                  "IsRequired": false,
+                  "DataItemName": "releaseslipno"
+                }
+              ]
+            }
+          },
+          "ResponseMappings": {
+            "actionResponse1": {
+              "ResponseMap": {
+                "MapID": "actionResponse1",
+                "DisplaySchemaType": "Releaseshipheader",
+                "IsMultiSegment": false,
+                "SchemaVariable": "ReleaseshipHeader",
+                "SegmentHierachy": "hdrseg",
+                "SegmentName": "hdrseg",
+                "ActualSegmentName": "hdrseg"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "Descaction",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "actiondescription"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "Decimal",
+                  "PropertyName": "AdditionalCharges",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "additionalcharge"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "DateTime",
+                  "PropertyName": "ApprovedDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "approveddate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "Decimal",
+                  "PropertyName": "BaseCurrencyValue",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "basecurrvalue"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "BlanketPoCreatedAt",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "blpocreatedat"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "DateTime",
+                  "PropertyName": "BlanketPoDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "blpodate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "BlanketPoNo",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "blpono"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "Remarks",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "bscoremarks"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "Buyer",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "buyerhdr"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "Hold",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "chkbx2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "ClassificationDesc",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "clsfy_desc_reslp"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "Classification",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "clsfy_vew_reslp"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "ContractType",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "contracttype"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "DateTime",
+                  "PropertyName": "CreatedDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "created_date"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "Name",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ename"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "Decimal",
+                  "PropertyName": "ExchangeRate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "exchangerate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "Folder",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "folder"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "int",
+                  "PropertyName": "Timestamp",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdntimestamp"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "DateTime",
+                  "PropertyName": "LastModifiedDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "lastmodifieddate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "OrderStatus",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "orderstatushdr"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "int",
+                  "PropertyName": "Ou",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ouinst"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "PaymentStatus",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "paymentstatus"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "int",
+                  "PropertyName": "AmendmentNo",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pse_amendmentno"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "CreatedBy",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pse_creationby"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "Currency",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pse_currencycode"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "LastModifiedBy",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pse_lastmodificationby"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "ReasonCode",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pse_reasoncode"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "DescReason",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pse_reasondescription"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "Decimal",
+                  "PropertyName": "TotalValue",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pse_totalvalue"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "TransactionType",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pse_trantype"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "WorkflowStatus",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pse_workflow_status"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "RateControl",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ratecontrol"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "ReasonCodeml",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "reasoncodeml"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "ReleaseSlipNo",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "releaseslipno"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "ReleaseSlipNoML",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "releaseslipnomlt"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "ReleaseSlipAmountDetails",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "rsamountdetails"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "DateTime",
+                  "PropertyName": "ReleaseSlipDate",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "rsdate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "ReleaseSlipDetails",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "rsdetails"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "Decimal",
+                  "PropertyName": "ReleaseSlipValue",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "rsvalue"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "Status",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "statushdr"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "SubclassificationDesc",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "subclsfy_desc_reslp"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "Subclassification",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "subclsfy_vew_reslp"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "SupplierCode",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "supplier_code"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "VatCalculation",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "vatcalc"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "String",
+                  "PropertyName": "WfdockeyPrs",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "wfdockey_prs"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Releaseshipheader",
+                  "DataType": "int",
+                  "PropertyName": "WforgunitPrs",
+                  "SegmentName": "hdrseg",
+                  "ActualSegmentName": "hdrseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "wforgunit_prs"
+                }
+              ]
+            },
+            "actionResponse2": {
+              "ResponseMap": {
+                "MapID": "actionResponse2",
+                "SchemaHierarchy": "Releaseshipheader",
+                "DisplaySchemaType": "Releaseshipdetails",
+                "IsMultiSegment": false,
+                "SchemaVariable": "releaseshipheader.ReleaseshipDetails",
+                "SegmentHierachy": "_tbl_rmseg",
+                "SegmentName": "_tbl_rmseg",
+                "ActualSegmentName": "TBL_rmseg"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "AcceptedQty",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "accptqtyml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "AccountingUnit",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "accunitml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "AdhocItemClass",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "adhocitemclassml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "BalanceQty",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "balance_quantity"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "BasicValue",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "basicvalue"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "BilledQuantity",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "billedquantity"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "BlanketPoBalanceQty",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "bpobalanceqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "int",
+                  "PropertyName": "BlanketPoLineNo",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "bpolinenoml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "Remarksml",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "comments_ml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "CostPer",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "costper"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "DrawingRevisionNo",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "drawingrevno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "Value",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "dvalue"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "Description",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "itemdescriptionml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "ItemCode",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "item_codeml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "int",
+                  "PropertyName": "LineNo",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "line_no"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "MatchedQuantity",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "matchedquantity"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "MovedQty",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "moved_qty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "DateTime",
+                  "PropertyName": "NeedDate",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "needdateml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "ProjectCode",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "project_code"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "ProjectDescription",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "project_description"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "ProjectOu",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "project_ou"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "TaskCode",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prs_taskcode"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "TaskDesc",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "prs_taskdesc"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "Cost",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "pse_cost"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "Quantity",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "qtyml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "ReturnedQty",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "qty_return"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "int",
+                  "PropertyName": "RateToleranceVe",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ratetolerance"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "ReceivedQty",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "received_qty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "ReceiptAt",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "recptat"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "int",
+                  "PropertyName": "RefDocLineNo",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "refdoclinenumber"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "RefDocType",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "refdoctype_mlt"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "RefDocNo",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ref_docmlt"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "RejectedQty",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "rejctqtyml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "ScheduleType",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "schtype"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "TotalValueml",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "totalvalueml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "Uom",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "uommult"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "Decimal",
+                  "PropertyName": "Valueml",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "value_multiline"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "VariantCode",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "variantml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "WarehouseCode",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "warehouse_code_mul"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Releaseshipdetails",
+                  "DataType": "String",
+                  "PropertyName": "WbsId",
+                  "SegmentName": "_tbl_rmseg",
+                  "ActualSegmentName": "TBL_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "wbsid"
+                }
+              ]
+            }
+          }
+        },
+        "x-ispaginationenabled": false
+      },
+      "parameters": [
+        {
+          "name": "ReleaseSlipNo",
+          "in": "query",
+          "description": "ReleaseSlipNo",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "context-lang-id",
+          "in": "header",
+          "description": "Language Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "context-ou-id",
+          "in": "header",
+          "description": "Orgnz Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "context-role-name",
+          "in": "header",
+          "description": "Role Id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "ReleaseshipDetails": {
+        "type": "object",
+        "properties": {
+          "AcceptedQty": {
+            "type": "number",
+            "description": "AcceptedQty"
+          },
+          "AccountingUnit": {
+            "type": "string",
+            "description": "AccountingUnit"
+          },
+          "AdhocItemClass": {
+            "type": "string",
+            "description": "AdhocItemClass"
+          },
+          "BalanceQty": {
+            "type": "number",
+            "description": "BalanceQty"
+          },
+          "BasicValue": {
+            "type": "number",
+            "description": "BasicValue"
+          },
+          "BilledQuantity": {
+            "type": "number",
+            "description": "BilledQuantity"
+          },
+          "BlanketPoBalanceQty": {
+            "type": "number",
+            "description": "BlanketPoBalanceQty"
+          },
+          "BlanketPoLineNo": {
+            "type": "integer",
+            "description": "BlanketPoLineNo"
+          },
+          "Cost": {
+            "type": "number",
+            "description": "Cost"
+          },
+          "CostPer": {
+            "type": "number",
+            "description": "CostPer"
+          },
+          "Description": {
+            "type": "string",
+            "description": "Description"
+          },
+          "DrawingRevisionNo": {
+            "type": "string",
+            "description": "DrawingRevisionNo"
+          },
+          "ItemCode": {
+            "type": "string",
+            "description": "ItemCode"
+          },
+          "LineNo": {
+            "type": "integer",
+            "description": "LineNo"
+          },
+          "MatchedQuantity": {
+            "type": "number",
+            "description": "MatchedQuantity"
+          },
+          "MovedQty": {
+            "type": "number",
+            "description": "MovedQty"
+          },
+          "NeedDate": {
+            "type": "string",
+            "description": "NeedDate",
+            "format": "date"
+          },
+          "ProjectCode": {
+            "type": "string",
+            "description": "ProjectCode"
+          },
+          "ProjectDescription": {
+            "type": "string",
+            "description": "ProjectDescription"
+          },
+          "ProjectOu": {
+            "type": "string",
+            "description": "ProjectOu"
+          },
+          "Quantity": {
+            "type": "number",
+            "description": "Quantity"
+          },
+          "RateToleranceVe": {
+            "type": "integer",
+            "description": "RateToleranceVe"
+          },
+          "ReceiptAt": {
+            "type": "string",
+            "description": "ReceiptAt"
+          },
+          "ReceivedQty": {
+            "type": "number",
+            "description": "ReceivedQty"
+          },
+          "RefDocLineNo": {
+            "type": "integer",
+            "description": "RefDocLineNo"
+          },
+          "RefDocNo": {
+            "type": "string",
+            "description": "RefDocNo"
+          },
+          "RefDocType": {
+            "type": "string",
+            "description": "RefDocType"
+          },
+          "RejectedQty": {
+            "type": "number",
+            "description": "RejectedQty"
+          },
+          "Remarksml": {
+            "type": "string",
+            "description": "Remarksml"
+          },
+          "ReturnedQty": {
+            "type": "number",
+            "description": "ReturnedQty"
+          },
+          "ScheduleType": {
+            "type": "string",
+            "description": "ScheduleType"
+          },
+          "TaskCode": {
+            "type": "string",
+            "description": "TaskCode"
+          },
+          "TaskDesc": {
+            "type": "string",
+            "description": "TaskDesc"
+          },
+          "TotalValueml": {
+            "type": "number",
+            "description": "TotalValueml"
+          },
+          "Uom": {
+            "type": "string",
+            "description": "Uom"
+          },
+          "Value": {
+            "type": "number",
+            "description": "Value"
+          },
+          "Valueml": {
+            "type": "number",
+            "description": "Valueml"
+          },
+          "VariantCode": {
+            "type": "string",
+            "description": "VariantCode"
+          },
+          "WarehouseCode": {
+            "type": "string",
+            "description": "WarehouseCode"
+          },
+          "WbsId": {
+            "type": "string",
+            "description": "WbsId"
+          }
+        },
+        "description": "ReleaseshipDetails",
+        "x-schemarequired": false
+      },
+      "ReleaseshipHeader": {
+        "required": [
+          "ReleaseSlipNo"
+        ],
+        "type": "object",
+        "properties": {
+          "AdditionalCharges": {
+            "type": "number",
+            "description": "AdditionalCharges"
+          },
+          "AmendmentNo": {
+            "type": "integer",
+            "description": "AmendmentNo"
+          },
+          "ApprovedDate": {
+            "type": "string",
+            "description": "ApprovedDate",
+            "format": "date"
+          },
+          "BaseCurrencyValue": {
+            "type": "number",
+            "description": "BaseCurrencyValue"
+          },
+          "BlanketPoCreatedAt": {
+            "type": "string",
+            "description": "BlanketPoCreatedAt"
+          },
+          "BlanketPoDate": {
+            "type": "string",
+            "description": "BlanketPoDate",
+            "format": "date"
+          },
+          "BlanketPoNo": {
+            "type": "string",
+            "description": "BlanketPoNo"
+          },
+          "Buyer": {
+            "type": "string",
+            "description": "Buyer"
+          },
+          "Classification": {
+            "type": "string",
+            "description": "Classification"
+          },
+          "ClassificationDesc": {
+            "type": "string",
+            "description": "ClassificationDesc"
+          },
+          "ContractType": {
+            "type": "string",
+            "description": "ContractType"
+          },
+          "CreatedBy": {
+            "type": "string",
+            "description": "CreatedBy"
+          },
+          "CreatedDate": {
+            "type": "string",
+            "description": "CreatedDate",
+            "format": "date"
+          },
+          "Currency": {
+            "type": "string",
+            "description": "Currency"
+          },
+          "Descaction": {
+            "type": "string",
+            "description": "Descaction"
+          },
+          "DescReason": {
+            "type": "string",
+            "description": "DescReason"
+          },
+          "ExchangeRate": {
+            "type": "number",
+            "description": "ExchangeRate"
+          },
+          "Folder": {
+            "type": "string",
+            "description": "Folder"
+          },
+          "Hold": {
+            "type": "string",
+            "description": "Hold"
+          },
+          "LastModifiedBy": {
+            "type": "string",
+            "description": "LastModifiedBy"
+          },
+          "LastModifiedDate": {
+            "type": "string",
+            "description": "LastModifiedDate",
+            "format": "date"
+          },
+          "Name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "OrderStatus": {
+            "type": "string",
+            "description": "OrderStatus"
+          },
+          "Ou": {
+            "type": "integer",
+            "description": "Ou"
+          },
+          "PaymentStatus": {
+            "type": "string",
+            "description": "PaymentStatus"
+          },
+          "RateControl": {
+            "type": "string",
+            "description": "RateControl"
+          },
+          "ReasonCode": {
+            "type": "string",
+            "description": "ReasonCode"
+          },
+          "ReasonCodeml": {
+            "type": "string",
+            "description": "ReasonCodeml"
+          },
+          "ReleaseSlipAmountDetails": {
+            "type": "string",
+            "description": "ReleaseSlipAmountDetails"
+          },
+          "ReleaseSlipDate": {
+            "type": "string",
+            "description": "ReleaseSlipDate",
+            "format": "date"
+          },
+          "ReleaseSlipDetails": {
+            "type": "string",
+            "description": "ReleaseSlipDetails"
+          },
+          "ReleaseSlipNo": {
+            "type": "string",
+            "description": "ReleaseSlipNo"
+          },
+          "ReleaseSlipNoML": {
+            "type": "string",
+            "description": "ReleaseSlipNoML"
+          },
+          "ReleaseSlipValue": {
+            "type": "number",
+            "description": "ReleaseSlipValue"
+          },
+          "Remarks": {
+            "type": "string",
+            "description": "Remarks"
+          },
+          "Status": {
+            "type": "string",
+            "description": "Status"
+          },
+          "Subclassification": {
+            "type": "string",
+            "description": "Subclassification"
+          },
+          "SubclassificationDesc": {
+            "type": "string",
+            "description": "SubclassificationDesc"
+          },
+          "SupplierCode": {
+            "type": "string",
+            "description": "SupplierCode"
+          },
+          "Timestamp": {
+            "type": "integer",
+            "description": "Timestamp"
+          },
+          "TotalValue": {
+            "type": "number",
+            "description": "TotalValue"
+          },
+          "TransactionType": {
+            "type": "string",
+            "description": "TransactionType"
+          },
+          "VatCalculation": {
+            "type": "string",
+            "description": "VatCalculation"
+          },
+          "WfdockeyPrs": {
+            "type": "string",
+            "description": "WfdockeyPrs"
+          },
+          "WforgunitPrs": {
+            "type": "integer",
+            "description": "WforgunitPrs"
+          },
+          "WorkflowStatus": {
+            "type": "string",
+            "description": "WorkflowStatus"
+          },
+          "ReleaseshipDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReleaseshipDetails"
+            },
+            "description": "ReleaseshipDetails"
+          }
+        },
+        "description": "ReleaseshipHeader",
+        "x-schemarequired": false
+      },
+      "apierror": {
+        "type": "object",
+        "properties": {
+          "instance": {
+            "type": "integer",
+            "description": "Instance Number",
+            "format": "int32"
+          },
+          "seqNo": {
+            "type": "integer",
+            "description": "Error Sequence Number",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "description": "Error ID",
+            "format": "int32"
+          },
+          "source": {
+            "type": "string",
+            "description": "Error Source"
+          },
+          "description": {
+            "type": "string",
+            "description": "Error Description"
+          },
+          "correctiveAction": {
+            "type": "string",
+            "description": "Error CorrectiveAction"
+          }
+        },
+        "description": "Error Object",
+        "x-schemarequired": false
+      },
+      "apierrors": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/apierror"
+        },
+        "description": "List of Error Object",
+        "x-schemarequired": false
+      }
+    },
+    "responses": {
+      "Error204": {
+        "description": "NO CONTENT"
+      },
+      "Error400": {
+        "description": "BAD DATA",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierrors"
+            }
+          }
+        }
+      },
+      "Error500": {
+        "description": "INVALID REQUEST",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierror"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "core_rids": {
+        "type": "oauth2",
+        "description": "Authorization header using the Bearer scheme. Example: \\\"Authorization: Bearer {token}\\\"",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "scopes": {
+              "rvw_impersonate": "User impersonation scope"
+            }
+          },
+          "clientCredentials": {
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "scopes": {
+              "rvw_nonimpersonate": "Service impersonation scope"
+            }
+          },
+          "authorizationCode": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "refreshUrl": "https://www.ramco.com/rvw",
+            "scopes": {
+              "rvw_anonymous": "User impersonation scope"
+            }
+          }
+        }
+      }
+    }
+  }
+}

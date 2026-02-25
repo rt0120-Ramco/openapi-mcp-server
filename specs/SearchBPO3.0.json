@@ -1,0 +1,727 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "SearchBPO",
+    "description": "SearchBPO",
+    "version": "1",
+    "x-processname": "Purchase",
+    "x-componentname": "BLPO_SER",
+    "x-componentnamealias": "BLPO_SER",
+    "x-specid": 620,
+    "x-specname": "SearchBPO",
+    "x-specdate": "2024-10-23T16:49:44.9270000",
+    "x-specversion": 1,
+    "x-includeprocessinroute": true,
+    "x-includecomponentinroute": true
+  },
+  "paths": {
+    "/SearchBPO": {
+      "get": {
+        "summary": "SearchResult",
+        "description": "SearchResult",
+        "operationId": "SearchResult",
+        "responses": {
+          "200": {
+            "description": "SearchBPO",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SearchResult"
+                  },
+                  "x-schemcategory": "PRS",
+                  "x-schemarequired": false
+                }
+              }
+            }
+          },
+          "204": {
+            "$ref": "#/components/responses/Error204"
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          }
+        },
+        "x-IsCustomCode": false,
+        "x-apipathoperationservicemap": {
+          "ServiceMapInfo": {
+            "ServiceID": 1685,
+            "ComponentName": "BLPO_SER",
+            "ServiceName": "bpo_VEN_Ser_srch_api",
+            "ServiceVersion": 1
+          },
+          "RequestBind": { },
+          "ResponseSchemaType": "List<Searchresult>",
+          "ParameterMappings": {
+            "HDRSEG": {
+              "ParameterMapInfo": [
+                {
+                  "ParameterName": "AddressId",
+                  "IsRequired": false,
+                  "DataItemName": "addressidhdr"
+                },
+                {
+                  "ParameterName": "BlanketPoNoFrom",
+                  "IsRequired": false,
+                  "DataItemName": "blponofrom"
+                },
+                {
+                  "ParameterName": "BlanketPoNoTo",
+                  "IsRequired": false,
+                  "DataItemName": "blponoto"
+                },
+                {
+                  "ParameterName": "Buyer",
+                  "IsRequired": false,
+                  "DataItemName": "buyerhdr"
+                },
+                {
+                  "ParameterName": "ContractType",
+                  "IsRequired": false,
+                  "DataItemName": "contypeenuall"
+                },
+                {
+                  "ParameterName": "Currency",
+                  "IsRequired": false,
+                  "DataItemName": "currency"
+                },
+                {
+                  "ParameterName": "DateFrom",
+                  "IsRequired": false,
+                  "DataItemName": "datefrom"
+                },
+                {
+                  "ParameterName": "DateTo",
+                  "IsRequired": false,
+                  "DataItemName": "date_to"
+                },
+                {
+                  "ParameterName": "Folder",
+                  "IsRequired": false,
+                  "DataItemName": "folder"
+                },
+                {
+                  "ParameterName": "ItemCode",
+                  "IsRequired": false,
+                  "DataItemName": "itemcode"
+                },
+                {
+                  "ParameterName": "ItemDescription",
+                  "IsRequired": false,
+                  "DataItemName": "bse_itemdesc"
+                },
+                {
+                  "ParameterName": "Loi",
+                  "IsRequired": false,
+                  "DataItemName": "loien"
+                },
+                {
+                  "ParameterName": "LoiToOrder",
+                  "IsRequired": false,
+                  "DataItemName": "loitoorderen"
+                },
+                {
+                  "ParameterName": "Name",
+                  "IsRequired": false,
+                  "DataItemName": "ename"
+                },
+                {
+                  "ParameterName": "Origin",
+                  "IsRequired": false,
+                  "DataItemName": "originhdr"
+                },
+                {
+                  "ParameterName": "QuotationNo",
+                  "IsRequired": false,
+                  "DataItemName": "quotnumber"
+                },
+                {
+                  "ParameterName": "Status",
+                  "IsRequired": false,
+                  "DataItemName": "status_fltr"
+                },
+                {
+                  "ParameterName": "SupplierCode",
+                  "IsRequired": false,
+                  "DataItemName": "supplier_code"
+                },
+                {
+                  "ParameterName": "Type",
+                  "IsRequired": false,
+                  "DataItemName": "potypeenum"
+                },
+                {
+                  "ParameterName": "ValueFrom",
+                  "IsRequired": false,
+                  "DataItemName": "valuefromhr"
+                },
+                {
+                  "ParameterName": "ValueTo",
+                  "IsRequired": false,
+                  "DataItemName": "valurtohr"
+                },
+                {
+                  "ParameterName": "VariantCode",
+                  "IsRequired": false,
+                  "DataItemName": "bse_variant"
+                }
+              ]
+            }
+          },
+          "ResponseMappings": {
+            "actionResponse1": {
+              "ResponseMap": {
+                "MapID": "actionResponse1",
+                "DisplaySchemaType": "Searchresult",
+                "IsMultiSegment": false,
+                "SchemaVariable": "Res_SearchResult",
+                "SegmentHierachy": "_mlve_rmseg",
+                "SegmentName": "_mlve_rmseg"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "DateTime",
+                  "PropertyName": "BlanketPoDate",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "blpodate"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "BlanketPoFolder",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "blpofolder"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "BlanketPoNo",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "blpono"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "BlanketPoType",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "blpotype"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "Loi",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "bse_loi"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "LoiToOrder",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "bse_loitoorder"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "ContractType",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "contracttypeml"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "Origin",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "originmlt"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "Remarks",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "remarks"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "Status",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "status"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "SupplierCode",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "suppliercodeml"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "Name",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "tosuppliername"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Searchresult",
+                  "DataType": "String",
+                  "PropertyName": "WorkflowStatus",
+                  "SegmentName": "_mlve_rmseg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "workflowstatus_blpo"
+                }
+              ]
+            }
+          }
+        },
+        "x-ispaginationenabled": false
+      },
+      "parameters": [
+        {
+          "name": "context-lang-id",
+          "in": "header",
+          "description": "Language Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "context-ou-id",
+          "in": "header",
+          "description": "Orgnz Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "context-role-name",
+          "in": "header",
+          "description": "Role Id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "AddressId",
+          "in": "query",
+          "description": "AddressId",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "BlanketPoNoFrom",
+          "in": "query",
+          "description": "BlanketPoNoFrom",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "BlanketPoNoTo",
+          "in": "query",
+          "description": "BlanketPoNoTo",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "Buyer",
+          "in": "query",
+          "description": "Buyer",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "ContractType",
+          "in": "query",
+          "description": "ContractType",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "Currency",
+          "in": "query",
+          "description": "Currency",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "DateFrom",
+          "in": "query",
+          "description": "DateFrom",
+          "schema": {
+            "type": "string",
+            "format": "date",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "DateTo",
+          "in": "query",
+          "description": "DateTo",
+          "schema": {
+            "type": "string",
+            "format": "date",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "Folder",
+          "in": "query",
+          "description": "Folder",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "ItemCode",
+          "in": "query",
+          "description": "ItemCode",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "ItemDescription",
+          "in": "query",
+          "description": "ItemDescription",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "Loi",
+          "in": "query",
+          "description": "Loi",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "LoiToOrder",
+          "in": "query",
+          "description": "LoiToOrder",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "Name",
+          "in": "query",
+          "description": "Name",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "Origin",
+          "in": "query",
+          "description": "Origin",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "QuotationNo",
+          "in": "query",
+          "description": "QuotationNo",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "Status",
+          "in": "query",
+          "description": "Status",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "SupplierCode",
+          "in": "query",
+          "description": "SupplierCode",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "Type",
+          "in": "query",
+          "description": "Type",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "ValueFrom",
+          "in": "query",
+          "description": "ValueFrom",
+          "schema": {
+            "type": "number",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "ValueTo",
+          "in": "query",
+          "description": "ValueTo",
+          "schema": {
+            "type": "number",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        },
+        {
+          "name": "VariantCode",
+          "in": "query",
+          "description": "VariantCode",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          }
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "SearchResult": {
+        "type": "object",
+        "properties": {
+          "BlanketPoDate": {
+            "type": "string",
+            "description": "BlanketPoDate",
+            "format": "date"
+          },
+          "BlanketPoFolder": {
+            "type": "string",
+            "description": "BlanketPoFolder"
+          },
+          "BlanketPoNo": {
+            "type": "string",
+            "description": "BlanketPoNo"
+          },
+          "BlanketPoType": {
+            "type": "string",
+            "description": "BlanketPoType"
+          },
+          "ContractType": {
+            "type": "string",
+            "description": "ContractType"
+          },
+          "Loi": {
+            "type": "string",
+            "description": "Loi"
+          },
+          "LoiToOrder": {
+            "type": "string",
+            "description": "LoiToOrder"
+          },
+          "Name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "Origin": {
+            "type": "string",
+            "description": "Origin"
+          },
+          "Remarks": {
+            "type": "string",
+            "description": "Remarks"
+          },
+          "Status": {
+            "type": "string",
+            "description": "Status"
+          },
+          "SupplierCode": {
+            "type": "string",
+            "description": "SupplierCode"
+          },
+          "WorkflowStatus": {
+            "type": "string",
+            "description": "WorkflowStatus"
+          }
+        },
+        "description": "SearchResult",
+        "x-schemarequired": false
+      },
+      "apierror": {
+        "type": "object",
+        "properties": {
+          "instance": {
+            "type": "integer",
+            "description": "Instance Number",
+            "format": "int32"
+          },
+          "seqNo": {
+            "type": "integer",
+            "description": "Error Sequence Number",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "description": "Error ID",
+            "format": "int32"
+          },
+          "source": {
+            "type": "string",
+            "description": "Error Source"
+          },
+          "description": {
+            "type": "string",
+            "description": "Error Description"
+          },
+          "correctiveAction": {
+            "type": "string",
+            "description": "Error CorrectiveAction"
+          }
+        },
+        "description": "Error Object",
+        "x-schemarequired": false
+      },
+      "apierrors": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/apierror"
+        },
+        "description": "List of Error Object",
+        "x-schemarequired": false
+      }
+    },
+    "responses": {
+      "Error204": {
+        "description": "NO CONTENT"
+      },
+      "Error400": {
+        "description": "BAD DATA",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierrors"
+            }
+          }
+        }
+      },
+      "Error500": {
+        "description": "INVALID REQUEST",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierror"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "core_rids": {
+        "type": "oauth2",
+        "description": "Authorization header using the Bearer scheme. Example: \\\"Authorization: Bearer {token}\\\"",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "scopes": {
+              "rvw_impersonate": "User impersonation scope"
+            }
+          },
+          "clientCredentials": {
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "scopes": {
+              "rvw_nonimpersonate": "Service impersonation scope"
+            }
+          },
+          "authorizationCode": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "refreshUrl": "https://www.ramco.com/rvw",
+            "scopes": {
+              "rvw_anonymous": "User impersonation scope"
+            }
+          }
+        }
+      }
+    }
+  }
+}

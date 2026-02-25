@@ -1,0 +1,2433 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "GETSupplierItemAndLeadTimeDtls",
+    "description": "GETSupplierItemAndLeadTimeDtls",
+    "version": "1",
+    "x-processname": "Purchase",
+    "x-componentname": "SUPP_SER",
+    "x-componentnamealias": "Supplier master",
+    "x-specid": 5151,
+    "x-specname": "GETSupplierItemAndLeadTimeDtls",
+    "x-specdate": "2025-11-10T12:44:02.2230000+05:30",
+    "x-specversion": 1,
+    "x-includeprocessinroute": true,
+    "x-includecomponentinroute": true
+  },
+  "paths": {
+    "/GETSupplierItemAndLeadTimeDtls": {
+      "get": {
+        "summary": "GETSupplierItemAndLeadTimeDtls",
+        "description": "GETSupplierItemAndLeadTimeDtls",
+        "operationId": "GETSupplierItemAndLeadTimeDtls",
+        "responses": {
+          "200": {
+            "description": "GETSupplierItemAndLeadTimeDtls",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/getsupplieritemandleadtimedtlshdr"
+                }
+              }
+            }
+          },
+          "204": {
+            "$ref": "#/components/responses/Error204"
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400"
+          },
+          "500": {
+            "$ref": "#/components/responses/Error500"
+          }
+        },
+        "x-IsCustomCode": false,
+        "x-canbechallenged": false,
+        "x-IsCacheEnabled": false,
+        "x-ispublish": false,
+        "x-apipathoperationservicemap": {
+          "ServiceMapInfo": {
+            "ServiceID": 5416,
+            "ComponentName": "SUPP_SER",
+            "ServiceName": "sup_bulk_ser_srch_api",
+            "ServiceVersion": 1
+          },
+          "RequestBind": { },
+          "ResponseSchemaType": "Getsupplieritemandleadtimedtlshdr",
+          "ParameterMappings": {
+            "_HSeg": {
+              "ParameterMapInfo": [
+                {
+                  "ParameterName": "Currency",
+                  "IsRequired": false,
+                  "DataItemName": "sus_currency"
+                },
+                {
+                  "ParameterName": "Extraamount1",
+                  "IsRequired": false,
+                  "DataItemName": "extra_amount1"
+                },
+                {
+                  "ParameterName": "Extrachar1",
+                  "IsRequired": false,
+                  "DataItemName": "sus_extra_char1"
+                },
+                {
+                  "ParameterName": "Extrachar2",
+                  "IsRequired": false,
+                  "DataItemName": "sus_extra_char2"
+                },
+                {
+                  "ParameterName": "Extrachar3",
+                  "IsRequired": false,
+                  "DataItemName": "extra_char3"
+                },
+                {
+                  "ParameterName": "Extrachar4",
+                  "IsRequired": false,
+                  "DataItemName": "extra_char4"
+                },
+                {
+                  "ParameterName": "Extrachar5",
+                  "IsRequired": false,
+                  "DataItemName": "extra_char5"
+                },
+                {
+                  "ParameterName": "Extradate1",
+                  "IsRequired": false,
+                  "DataItemName": "sus_extra_date1"
+                },
+                {
+                  "ParameterName": "Extradate2",
+                  "IsRequired": false,
+                  "DataItemName": "sus_extra_date2"
+                },
+                {
+                  "ParameterName": "Extradate3",
+                  "IsRequired": false,
+                  "DataItemName": "extra_date3"
+                },
+                {
+                  "ParameterName": "Extradatetime1",
+                  "IsRequired": false,
+                  "DataItemName": "extra_datetime1"
+                },
+                {
+                  "ParameterName": "Extradatetime2",
+                  "IsRequired": false,
+                  "DataItemName": "extra_datetime2"
+                },
+                {
+                  "ParameterName": "Extradatetime3",
+                  "IsRequired": false,
+                  "DataItemName": "extra_datetime3"
+                },
+                {
+                  "ParameterName": "Extraint1",
+                  "IsRequired": false,
+                  "DataItemName": "extra_int1"
+                },
+                {
+                  "ParameterName": "Extraint2",
+                  "IsRequired": false,
+                  "DataItemName": "extra_int2"
+                },
+                {
+                  "ParameterName": "Extraint3",
+                  "IsRequired": false,
+                  "DataItemName": "extra_int3"
+                },
+                {
+                  "ParameterName": "Extranum1",
+                  "IsRequired": false,
+                  "DataItemName": "extra_num1"
+                },
+                {
+                  "ParameterName": "Extranum2",
+                  "IsRequired": false,
+                  "DataItemName": "extra_num2"
+                },
+                {
+                  "ParameterName": "Extraqty1",
+                  "IsRequired": false,
+                  "DataItemName": "extra_qty1"
+                },
+                {
+                  "ParameterName": "Hdnguid",
+                  "IsRequired": false,
+                  "DataItemName": "sus_hdnguid"
+                },
+                {
+                  "ParameterName": "Hdnmode",
+                  "IsRequired": false,
+                  "DataItemName": "sus_hdn_mode"
+                },
+                {
+                  "ParameterName": "Hdnrtstcontrol",
+                  "IsRequired": false,
+                  "DataItemName": "hdnrt_stcontrol"
+                },
+                {
+                  "ParameterName": "Hdnsupcat",
+                  "IsRequired": false,
+                  "DataItemName": "hdn_supcat"
+                },
+                {
+                  "ParameterName": "Hdnsupclas",
+                  "IsRequired": false,
+                  "DataItemName": "hdn_supclas"
+                },
+                {
+                  "ParameterName": "Hdntimestamp",
+                  "IsRequired": false,
+                  "DataItemName": "sus_hdntimestamp"
+                },
+                {
+                  "ParameterName": "Hdntype",
+                  "IsRequired": false,
+                  "DataItemName": "sus_hdn_type"
+                },
+                {
+                  "ParameterName": "Hiddensb1",
+                  "IsRequired": false,
+                  "DataItemName": "hidden_sb1"
+                },
+                {
+                  "ParameterName": "Hiddensb2",
+                  "IsRequired": false,
+                  "DataItemName": "hidden_sb2"
+                },
+                {
+                  "ParameterName": "Hiddensb3",
+                  "IsRequired": false,
+                  "DataItemName": "hidden_sb3"
+                },
+                {
+                  "ParameterName": "Hiddensb4",
+                  "IsRequired": false,
+                  "DataItemName": "hidden_sb4"
+                },
+                {
+                  "ParameterName": "Hiddensb5",
+                  "IsRequired": false,
+                  "DataItemName": "hidden_sb5"
+                },
+                {
+                  "ParameterName": "Itemcategory",
+                  "IsRequired": false,
+                  "DataItemName": "sus_itemcategory"
+                },
+                {
+                  "ParameterName": "Itemcode",
+                  "IsRequired": false,
+                  "DataItemName": "itemcode"
+                },
+                {
+                  "ParameterName": "Itemmapping",
+                  "IsRequired": false,
+                  "DataItemName": "itemmapping"
+                },
+                {
+                  "ParameterName": "Itemname",
+                  "IsRequired": false,
+                  "DataItemName": "sus_itemname"
+                },
+                {
+                  "ParameterName": "Ratemapping",
+                  "IsRequired": false,
+                  "DataItemName": "ratemapping"
+                },
+                {
+                  "ParameterName": "Suppliercode",
+                  "IsRequired": false,
+                  "DataItemName": "suppliercode"
+                },
+                {
+                  "ParameterName": "Supplierdesc",
+                  "IsRequired": false,
+                  "DataItemName": "supplier_desc"
+                },
+                {
+                  "ParameterName": "Supplierdtlsitemdetails",
+                  "IsRequired": false,
+                  "DataItemName": "supplierdtls_itemdetails"
+                },
+                {
+                  "ParameterName": "Suppliermapping",
+                  "IsRequired": false,
+                  "DataItemName": "suppliermapping"
+                },
+                {
+                  "ParameterName": "Suppliername",
+                  "IsRequired": false,
+                  "DataItemName": "sus_suppliername"
+                },
+                {
+                  "ParameterName": "Variantcode",
+                  "IsRequired": false,
+                  "DataItemName": "sus_variantcode"
+                }
+              ]
+            }
+          },
+          "ResponseMappings": {
+            "actionResponse1": {
+              "ResponseMap": {
+                "MapID": "actionResponse1",
+                "DisplaySchemaType": "Getsupplieritemandleadtimedtlshdr",
+                "IsMultiSegment": false,
+                "SchemaVariable": "getsupplieritemandleadtimedtlshdr",
+                "SegmentHierachy": "_hseg",
+                "SegmentName": "_hseg",
+                "ActualSegmentName": "_HSeg"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "Decimal",
+                  "PropertyName": "Extraamount1",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_amount1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Extrachar3",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_char3"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Extrachar4",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_char4"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Extrachar5",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_char5"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "DateTime",
+                  "PropertyName": "Extradate3",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_date3"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "DateTime",
+                  "PropertyName": "Extradatetime1",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_datetime1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "DateTime",
+                  "PropertyName": "Extradatetime2",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_datetime2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "DateTime",
+                  "PropertyName": "Extradatetime3",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_datetime3"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "int",
+                  "PropertyName": "Extraint1",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_int1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "int",
+                  "PropertyName": "Extraint2",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_int2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "int",
+                  "PropertyName": "Extraint3",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_int3"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "Decimal",
+                  "PropertyName": "Extranum1",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_num1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "Decimal",
+                  "PropertyName": "Extranum2",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_num2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "Decimal",
+                  "PropertyName": "Extraqty1",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "extra_qty1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hdnrtstcontrol",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdnrt_stcontrol"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hdnsupcat",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_supcat"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hdnsupclas",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_supclas"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hiddensb1",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hidden_sb1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hiddensb2",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hidden_sb2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hiddensb3",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hidden_sb3"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hiddensb4",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hidden_sb4"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hiddensb5",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hidden_sb5"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Itemcode",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "itemcode"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Itemmapping",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "itemmapping"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Ratemapping",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ratemapping"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Suppliercode",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "suppliercode"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Supplierdtlsitemdetails",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "supplierdtls_itemdetails"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Suppliermapping",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "suppliermapping"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Supplierdesc",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "supplier_desc"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Currency",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_currency"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Extrachar1",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_extra_char1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Extrachar2",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_extra_char2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "DateTime",
+                  "PropertyName": "Extradate1",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_extra_date1"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "DateTime",
+                  "PropertyName": "Extradate2",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_extra_date2"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hdnguid",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdnguid"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hdntimestamp",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdntimestamp"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hdnmode",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdn_mode"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Hdntype",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdn_type"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Itemcategory",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_itemcategory"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Itemname",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_itemname"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Suppliername",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_suppliername"
+                },
+                {
+                  "MapID": "actionResponse1",
+                  "SchemaName": "Getsupplieritemandleadtimedtlshdr",
+                  "DataType": "String",
+                  "PropertyName": "Variantcode",
+                  "SegmentName": "_hseg",
+                  "ActualSegmentName": "_HSeg",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_variantcode"
+                }
+              ]
+            },
+            "actionResponse2": {
+              "ResponseMap": {
+                "MapID": "actionResponse2",
+                "SchemaHierarchy": "Getsupplieritemandleadtimedtlshdr",
+                "DisplaySchemaType": "Getsupplieritemandleadtimedtlsdtl",
+                "IsMultiSegment": false,
+                "SchemaVariable": "getsupplieritemandleadtimedtlshdr.getsupplieritemandleadtimedtlsdtl",
+                "SegmentHierachy": "__mlmlout",
+                "SegmentName": "__mlmlout",
+                "ActualSegmentName": "_mlMLOut"
+              },
+              "ResponseMapProperties": [
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Bomreference",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "bom_reference"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Checklist",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "checklist"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "DateTime",
+                  "PropertyName": "Createddate",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "createddate"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Currencygrid",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "currency_grid"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Defaultuom",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "default_uom"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "int",
+                  "PropertyName": "Hdnlinenodoc",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdnlineno_doc"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "int",
+                  "PropertyName": "Hdnlnno",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdnlnno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdninstype",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_instype"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "int",
+                  "PropertyName": "Hdnlineno",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_lineno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "int",
+                  "PropertyName": "Hdnlinenumber",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_lineno1"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdnmattype",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_mattype"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdnpsmntsampling",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_preshipmentsampling"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdnrule",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_rule"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdnsourceml",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_source_ml"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdnsulno",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_sulno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdnsusbltno",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_susbltno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdnsuslno",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "hdn_suslno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Itemcode",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "item_code"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Itemrevisionno",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "item_revision_no"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "Decimal",
+                  "PropertyName": "Lastpurchaseprice",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "lastpurchaseprice"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "Decimal",
+                  "PropertyName": "Maximumorderqty",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "maximumorderqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "Decimal",
+                  "PropertyName": "Minimumorderqty",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "minimumorderqty"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "Decimal",
+                  "PropertyName": "Mlextraamount1",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_amount1"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Mlextrachar1",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char1"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Mlextrachar2",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char2"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Mlextrachar3",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char3"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Mlextrachar4",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char4"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Mlextrachar5",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_char5"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "DateTime",
+                  "PropertyName": "Mlextradate1",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date1"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "DateTime",
+                  "PropertyName": "Mlextradate2",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date2"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "DateTime",
+                  "PropertyName": "Mlextradate3",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_date3"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "DateTime",
+                  "PropertyName": "Mlextradatetime1",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime1"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "DateTime",
+                  "PropertyName": "Mlextradatetime2",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime2"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "DateTime",
+                  "PropertyName": "Mlextradatetime3",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_datetime3"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "int",
+                  "PropertyName": "Mlextraint1",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int1"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "int",
+                  "PropertyName": "Mlextraint2",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int2"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "int",
+                  "PropertyName": "Mlextraint3",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_int3"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "Decimal",
+                  "PropertyName": "Mlextranum1",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_num1"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "Decimal",
+                  "PropertyName": "Mlextranum2",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_num2"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "Decimal",
+                  "PropertyName": "Mlextraqty1",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ml_extra_qty1"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "Decimal",
+                  "PropertyName": "Ordermultiples",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "ordermultiples"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "Decimal",
+                  "PropertyName": "Per",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "per"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Puom",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "puom"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Suppliercode",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "supplier_code"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Supplieritemdesc",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "supplier_item_desc"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Supplieritemref",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "supplier_item_ref"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "Decimal",
+                  "PropertyName": "Cost",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_cost"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Createdby",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_createdby"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Desc",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_desc"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "DateTime",
+                  "PropertyName": "Effectivefrom",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_effectivefrom"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "DateTime",
+                  "PropertyName": "Effectiveto",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_effectiveto"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "int",
+                  "PropertyName": "Hdnlinenmbr",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdnlineno"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdnbasis",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdn_basis"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdndesc1",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdn_desc1"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdndesc2",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdn_desc2"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdndesc3",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdn_desc3"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdndesc4",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdn_desc4"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Hdndesc5",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_hdn_desc5"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "int",
+                  "PropertyName": "Leadtimedays",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_lead_time_days"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Modifiedby",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_modifiedby"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "DateTime",
+                  "PropertyName": "Modifieddate",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_modifieddate"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Suppliername",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "sus_supplier_name"
+                },
+                {
+                  "MapID": "actionResponse2",
+                  "SchemaName": "Getsupplieritemandleadtimedtlsdtl",
+                  "DataType": "String",
+                  "PropertyName": "Variantcode",
+                  "SegmentName": "__mlmlout",
+                  "ActualSegmentName": "_mlMLOut",
+                  "SegmentInstance": 0,
+                  "DataItemName": "variant_code"
+                }
+              ]
+            }
+          }
+        },
+        "x-ispaginationenabled": false
+      },
+      "parameters": [
+        {
+          "name": "context-lang-id",
+          "in": "header",
+          "description": "Language Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "context-ou-id",
+          "in": "header",
+          "description": "Orgnz Id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "context-role-name",
+          "in": "header",
+          "description": "Role Id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": true
+        },
+        {
+          "name": "Currency",
+          "in": "query",
+          "description": "Currency",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extraamount1",
+          "in": "query",
+          "description": "Extraamount1",
+          "schema": {
+            "type": "number",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extrachar1",
+          "in": "query",
+          "description": "Extrachar1",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extrachar2",
+          "in": "query",
+          "description": "Extrachar2",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extrachar3",
+          "in": "query",
+          "description": "Extrachar3",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extrachar4",
+          "in": "query",
+          "description": "Extrachar4",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extrachar5",
+          "in": "query",
+          "description": "Extrachar5",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradate1",
+          "in": "query",
+          "description": "Extradate1",
+          "schema": {
+            "type": "string",
+            "format": "date",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradate2",
+          "in": "query",
+          "description": "Extradate2",
+          "schema": {
+            "type": "string",
+            "format": "date",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradate3",
+          "in": "query",
+          "description": "Extradate3",
+          "schema": {
+            "type": "string",
+            "format": "date",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradatetime1",
+          "in": "query",
+          "description": "Extradatetime1",
+          "schema": {
+            "type": "string",
+            "format": "date-time",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradatetime2",
+          "in": "query",
+          "description": "Extradatetime2",
+          "schema": {
+            "type": "string",
+            "format": "date-time",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extradatetime3",
+          "in": "query",
+          "description": "Extradatetime3",
+          "schema": {
+            "type": "string",
+            "format": "date-time",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extraint1",
+          "in": "query",
+          "description": "Extraint1",
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extraint2",
+          "in": "query",
+          "description": "Extraint2",
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extraint3",
+          "in": "query",
+          "description": "Extraint3",
+          "schema": {
+            "type": "integer",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extranum1",
+          "in": "query",
+          "description": "Extranum1",
+          "schema": {
+            "type": "number",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extranum2",
+          "in": "query",
+          "description": "Extranum2",
+          "schema": {
+            "type": "number",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Extraqty1",
+          "in": "query",
+          "description": "Extraqty1",
+          "schema": {
+            "type": "number",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hdnguid",
+          "in": "query",
+          "description": "Hdnguid",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hdnmode",
+          "in": "query",
+          "description": "Hdnmode",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hdnrtstcontrol",
+          "in": "query",
+          "description": "Hdnrtstcontrol",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hdnsupcat",
+          "in": "query",
+          "description": "Hdnsupcat",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hdnsupclas",
+          "in": "query",
+          "description": "Hdnsupclas",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hdntimestamp",
+          "in": "query",
+          "description": "Hdntimestamp",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hdntype",
+          "in": "query",
+          "description": "Hdntype",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hiddensb1",
+          "in": "query",
+          "description": "Hiddensb1",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hiddensb2",
+          "in": "query",
+          "description": "Hiddensb2",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hiddensb3",
+          "in": "query",
+          "description": "Hiddensb3",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hiddensb4",
+          "in": "query",
+          "description": "Hiddensb4",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Hiddensb5",
+          "in": "query",
+          "description": "Hiddensb5",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Itemcategory",
+          "in": "query",
+          "description": "Itemcategory",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Itemcode",
+          "in": "query",
+          "description": "Itemcode",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Itemmapping",
+          "in": "query",
+          "description": "Itemmapping",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Itemname",
+          "in": "query",
+          "description": "Itemname",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Ratemapping",
+          "in": "query",
+          "description": "Ratemapping",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Suppliercode",
+          "in": "query",
+          "description": "Suppliercode",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Supplierdesc",
+          "in": "query",
+          "description": "Supplierdesc",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Supplierdtlsitemdetails",
+          "in": "query",
+          "description": "Supplierdtlsitemdetails",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Suppliermapping",
+          "in": "query",
+          "description": "Suppliermapping",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Suppliername",
+          "in": "query",
+          "description": "Suppliername",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        },
+        {
+          "name": "Variantcode",
+          "in": "query",
+          "description": "Variantcode",
+          "schema": {
+            "type": "string",
+            "x-schemcategory": "PP",
+            "x-schemarequired": false
+          },
+          "x-IncludeInCacheKey": false
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "getsupplieritemandleadtimedtlsdtl": {
+        "type": "object",
+        "properties": {
+          "Bomreference": {
+            "type": "string",
+            "description": "Bomreference"
+          },
+          "Checklist": {
+            "type": "string",
+            "description": "Checklist"
+          },
+          "Cost": {
+            "type": "number",
+            "description": "Cost",
+            "format": "number"
+          },
+          "Createdby": {
+            "type": "string",
+            "description": "Createdby"
+          },
+          "Createddate": {
+            "type": "string",
+            "description": "Createddate",
+            "format": "date"
+          },
+          "Currencygrid": {
+            "type": "string",
+            "description": "Currencygrid"
+          },
+          "Defaultuom": {
+            "type": "string",
+            "description": "Defaultuom"
+          },
+          "Desc": {
+            "type": "string",
+            "description": "Desc"
+          },
+          "Effectivefrom": {
+            "type": "string",
+            "description": "Effectivefrom",
+            "format": "date"
+          },
+          "Effectiveto": {
+            "type": "string",
+            "description": "Effectiveto",
+            "format": "date"
+          },
+          "Hdnbasis": {
+            "type": "string",
+            "description": "Hdnbasis"
+          },
+          "Hdndesc1": {
+            "type": "string",
+            "description": "Hdndesc1"
+          },
+          "Hdndesc2": {
+            "type": "string",
+            "description": "Hdndesc2"
+          },
+          "Hdndesc3": {
+            "type": "string",
+            "description": "Hdndesc3"
+          },
+          "Hdndesc4": {
+            "type": "string",
+            "description": "Hdndesc4"
+          },
+          "Hdndesc5": {
+            "type": "string",
+            "description": "Hdndesc5"
+          },
+          "Hdninstype": {
+            "type": "string",
+            "description": "Hdninstype"
+          },
+          "Hdnlinenmbr": {
+            "type": "integer",
+            "description": "Hdnlineno"
+          },
+          "Hdnlineno": {
+            "type": "integer",
+            "description": "Hdnlineno"
+          },
+          "Hdnlinenodoc": {
+            "type": "integer",
+            "description": "Hdnlinenodoc"
+          },
+          "Hdnlinenumber": {
+            "type": "integer",
+            "description": "Hdnlineno1"
+          },
+          "Hdnlnno": {
+            "type": "integer",
+            "description": "Hdnlnno"
+          },
+          "Hdnmattype": {
+            "type": "string",
+            "description": "Hdnmattype"
+          },
+          "Hdnpsmntsampling": {
+            "type": "string",
+            "description": "Hdnpsmntsampling"
+          },
+          "Hdnrule": {
+            "type": "string",
+            "description": "Hdnrule"
+          },
+          "Hdnsourceml": {
+            "type": "string",
+            "description": "Hdnsourceml"
+          },
+          "Hdnsulno": {
+            "type": "string",
+            "description": "Hdnsulno"
+          },
+          "Hdnsusbltno": {
+            "type": "string",
+            "description": "Hdnsusbltno"
+          },
+          "Hdnsuslno": {
+            "type": "string",
+            "description": "Hdnsuslno"
+          },
+          "Itemcode": {
+            "type": "string",
+            "description": "Itemcode"
+          },
+          "Itemrevisionno": {
+            "type": "string",
+            "description": "Itemrevisionno"
+          },
+          "Lastpurchaseprice": {
+            "type": "number",
+            "description": "Lastpurchaseprice",
+            "format": "number"
+          },
+          "Leadtimedays": {
+            "type": "integer",
+            "description": "Leadtimedays"
+          },
+          "Maximumorderqty": {
+            "type": "number",
+            "description": "Maximumorderqty",
+            "format": "number"
+          },
+          "Minimumorderqty": {
+            "type": "number",
+            "description": "Minimumorderqty",
+            "format": "number"
+          },
+          "Mlextraamount1": {
+            "type": "number",
+            "description": "Mlextraamount1",
+            "format": "number"
+          },
+          "Mlextrachar1": {
+            "type": "string",
+            "description": "Mlextrachar1"
+          },
+          "Mlextrachar2": {
+            "type": "string",
+            "description": "Mlextrachar2"
+          },
+          "Mlextrachar3": {
+            "type": "string",
+            "description": "Mlextrachar3"
+          },
+          "Mlextrachar4": {
+            "type": "string",
+            "description": "Mlextrachar4"
+          },
+          "Mlextrachar5": {
+            "type": "string",
+            "description": "Mlextrachar5"
+          },
+          "Mlextradate1": {
+            "type": "string",
+            "description": "Mlextradate1",
+            "format": "date"
+          },
+          "Mlextradate2": {
+            "type": "string",
+            "description": "Mlextradate2",
+            "format": "date"
+          },
+          "Mlextradate3": {
+            "type": "string",
+            "description": "Mlextradate3",
+            "format": "date"
+          },
+          "Mlextradatetime1": {
+            "type": "string",
+            "description": "Mlextradatetime1",
+            "format": "date-time"
+          },
+          "Mlextradatetime2": {
+            "type": "string",
+            "description": "Mlextradatetime2",
+            "format": "date-time"
+          },
+          "Mlextradatetime3": {
+            "type": "string",
+            "description": "Mlextradatetime3",
+            "format": "date-time"
+          },
+          "Mlextraint1": {
+            "type": "integer",
+            "description": "Mlextraint1"
+          },
+          "Mlextraint2": {
+            "type": "integer",
+            "description": "Mlextraint2"
+          },
+          "Mlextraint3": {
+            "type": "integer",
+            "description": "Mlextraint3"
+          },
+          "Mlextranum1": {
+            "type": "number",
+            "description": "Mlextranum1",
+            "format": "number"
+          },
+          "Mlextranum2": {
+            "type": "number",
+            "description": "Mlextranum2",
+            "format": "number"
+          },
+          "Mlextraqty1": {
+            "type": "number",
+            "description": "Mlextraqty1",
+            "format": "number"
+          },
+          "Modifiedby": {
+            "type": "string",
+            "description": "Modifiedby"
+          },
+          "Modifieddate": {
+            "type": "string",
+            "description": "Modifieddate",
+            "format": "date"
+          },
+          "Ordermultiples": {
+            "type": "number",
+            "description": "Ordermultiples",
+            "format": "number"
+          },
+          "Per": {
+            "type": "number",
+            "description": "Per",
+            "format": "number"
+          },
+          "Puom": {
+            "type": "string",
+            "description": "Puom"
+          },
+          "Suppliercode": {
+            "type": "string",
+            "description": "Suppliercode"
+          },
+          "Supplieritemdesc": {
+            "type": "string",
+            "description": "Supplieritemdesc"
+          },
+          "Supplieritemref": {
+            "type": "string",
+            "description": "Supplieritemref"
+          },
+          "Suppliername": {
+            "type": "string",
+            "description": "Suppliername"
+          },
+          "Variantcode": {
+            "type": "string",
+            "description": "Variantcode"
+          }
+        },
+        "description": "getsupplieritemandleadtimedtlsdtl",
+        "x-schemarequired": false
+      },
+      "getsupplieritemandleadtimedtlshdr": {
+        "type": "object",
+        "properties": {
+          "Currency": {
+            "type": "string",
+            "description": "Currency"
+          },
+          "Extraamount1": {
+            "type": "number",
+            "description": "Extraamount1",
+            "format": "number"
+          },
+          "Extrachar1": {
+            "type": "string",
+            "description": "Extrachar1"
+          },
+          "Extrachar2": {
+            "type": "string",
+            "description": "Extrachar2"
+          },
+          "Extrachar3": {
+            "type": "string",
+            "description": "Extrachar3"
+          },
+          "Extrachar4": {
+            "type": "string",
+            "description": "Extrachar4"
+          },
+          "Extrachar5": {
+            "type": "string",
+            "description": "Extrachar5"
+          },
+          "Extradate1": {
+            "type": "string",
+            "description": "Extradate1",
+            "format": "date"
+          },
+          "Extradate2": {
+            "type": "string",
+            "description": "Extradate2",
+            "format": "date"
+          },
+          "Extradate3": {
+            "type": "string",
+            "description": "Extradate3",
+            "format": "date"
+          },
+          "Extradatetime1": {
+            "type": "string",
+            "description": "Extradatetime1",
+            "format": "date-time"
+          },
+          "Extradatetime2": {
+            "type": "string",
+            "description": "Extradatetime2",
+            "format": "date-time"
+          },
+          "Extradatetime3": {
+            "type": "string",
+            "description": "Extradatetime3",
+            "format": "date-time"
+          },
+          "Extraint1": {
+            "type": "integer",
+            "description": "Extraint1"
+          },
+          "Extraint2": {
+            "type": "integer",
+            "description": "Extraint2"
+          },
+          "Extraint3": {
+            "type": "integer",
+            "description": "Extraint3"
+          },
+          "Extranum1": {
+            "type": "number",
+            "description": "Extranum1",
+            "format": "number"
+          },
+          "Extranum2": {
+            "type": "number",
+            "description": "Extranum2",
+            "format": "number"
+          },
+          "Extraqty1": {
+            "type": "number",
+            "description": "Extraqty1",
+            "format": "number"
+          },
+          "Hdnguid": {
+            "type": "string",
+            "description": "Hdnguid"
+          },
+          "Hdnmode": {
+            "type": "string",
+            "description": "Hdnmode"
+          },
+          "Hdnrtstcontrol": {
+            "type": "string",
+            "description": "Hdnrtstcontrol"
+          },
+          "Hdnsupcat": {
+            "type": "string",
+            "description": "Hdnsupcat"
+          },
+          "Hdnsupclas": {
+            "type": "string",
+            "description": "Hdnsupclas"
+          },
+          "Hdntimestamp": {
+            "type": "string",
+            "description": "Hdntimestamp"
+          },
+          "Hdntype": {
+            "type": "string",
+            "description": "Hdntype"
+          },
+          "Hiddensb1": {
+            "type": "string",
+            "description": "Hiddensb1"
+          },
+          "Hiddensb2": {
+            "type": "string",
+            "description": "Hiddensb2"
+          },
+          "Hiddensb3": {
+            "type": "string",
+            "description": "Hiddensb3"
+          },
+          "Hiddensb4": {
+            "type": "string",
+            "description": "Hiddensb4"
+          },
+          "Hiddensb5": {
+            "type": "string",
+            "description": "Hiddensb5"
+          },
+          "Itemcategory": {
+            "type": "string",
+            "description": "Itemcategory"
+          },
+          "Itemcode": {
+            "type": "string",
+            "description": "Itemcode"
+          },
+          "Itemmapping": {
+            "type": "string",
+            "description": "Itemmapping"
+          },
+          "Itemname": {
+            "type": "string",
+            "description": "Itemname"
+          },
+          "Ratemapping": {
+            "type": "string",
+            "description": "Ratemapping"
+          },
+          "Suppliercode": {
+            "type": "string",
+            "description": "Suppliercode"
+          },
+          "Supplierdesc": {
+            "type": "string",
+            "description": "Supplierdesc"
+          },
+          "Supplierdtlsitemdetails": {
+            "type": "string",
+            "description": "Supplierdtlsitemdetails"
+          },
+          "Suppliermapping": {
+            "type": "string",
+            "description": "Suppliermapping"
+          },
+          "Suppliername": {
+            "type": "string",
+            "description": "Suppliername"
+          },
+          "Variantcode": {
+            "type": "string",
+            "description": "Variantcode"
+          },
+          "getsupplieritemandleadtimedtlsdtl": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/getsupplieritemandleadtimedtlsdtl"
+            },
+            "description": "getsupplieritemandleadtimedtlsdtl"
+          }
+        },
+        "description": "getsupplieritemandleadtimedtlshdr",
+        "x-schemarequired": false
+      },
+      "apierror": {
+        "type": "object",
+        "properties": {
+          "instance": {
+            "type": "integer",
+            "description": "Instance Number",
+            "format": "int32"
+          },
+          "seqNo": {
+            "type": "integer",
+            "description": "Error Sequence Number",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "description": "Error ID",
+            "format": "int32"
+          },
+          "source": {
+            "type": "string",
+            "description": "Error Source"
+          },
+          "description": {
+            "type": "string",
+            "description": "Error Description"
+          },
+          "correctiveAction": {
+            "type": "string",
+            "description": "Error CorrectiveAction"
+          }
+        },
+        "description": "Error Object",
+        "x-schemarequired": false
+      },
+      "apierrors": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/apierror"
+        },
+        "description": "List of Error Object",
+        "x-schemarequired": false
+      }
+    },
+    "responses": {
+      "Error204": {
+        "description": "NO CONTENT"
+      },
+      "Error400": {
+        "description": "BAD DATA",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierrors"
+            }
+          }
+        }
+      },
+      "Error500": {
+        "description": "INVALID REQUEST",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/apierror"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "core_rids": {
+        "type": "oauth2",
+        "description": "Authorization header using the Bearer scheme. Example: \\\"Authorization: Bearer {token}\\\"",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "scopes": {
+              "rvw_impersonate": "User impersonation scope"
+            }
+          },
+          "clientCredentials": {
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "scopes": {
+              "rvw_nonimpersonate": "Service impersonation scope"
+            }
+          },
+          "authorizationCode": {
+            "authorizationUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/authorize",
+            "tokenUrl": "https://rvwpoc20.ramco.com/coresecurityops/connect/token",
+            "refreshUrl": "https://www.ramco.com/rvw",
+            "scopes": {
+              "rvw_anonymous": "User impersonation scope"
+            }
+          }
+        }
+      }
+    }
+  }
+}
