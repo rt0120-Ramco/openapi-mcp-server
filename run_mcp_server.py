@@ -35,7 +35,8 @@ def create_unified_server():
     jsonplaceholder_mcp = FastMCP.from_openapi(
         openapi_spec=spec,
         client=client,
-        name="JSONPlaceholder API"
+        name="JSONPlaceholder API",
+        validate_output=False
     )
     gateway.mount(jsonplaceholder_mcp, namespace="jsonplaceholder")
     print("   ✓ Mounted with namespace: jsonplaceholder")
@@ -57,7 +58,8 @@ def create_unified_server():
     authorizeassets_mcp = FastMCP.from_openapi(
         openapi_spec=spec,
         client=client,
-        name="AuthorizeAssets API"
+        name="AuthorizeAssets API",
+        validate_output=False
     )
     gateway.mount(authorizeassets_mcp, namespace="assets")
     print("   ✓ Mounted with namespace: assets")
@@ -69,17 +71,22 @@ def create_unified_server():
         spec = json.load(f)
 
     client = httpx.AsyncClient(
-        base_url="https://erpenhdev.ramcouat.com/coreapiops/Purchase/Pur_Req_SER/v1",
+        base_url="https://erpenhdev.ramcouat.com/coreapiops/Purchase/PRA/v1",
         verify=False,
         timeout=30.0,
         follow_redirects=True,
-        headers={"Accept": "application/json", "Content-Type": "application/json"}
+        headers={ 
+                    "Accept": "application/json", 
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkI0MUU2NzE0NDk3RjEyREM1RTc3MDhCQzdCMENCNjVGQjRBRERCMkJSUzI1NiIsInR5cCI6IkpXVCIsIng1dCI6InRCNW5GRWxfRXR4ZWR3aThld3kyWDdTdDJ5cyJ9.eyJuYmYiOjE3NzIxMDQ2ODcsImV4cCI6MTc3MjEwODI4NywiaXNzIjoiaHR0cHM6Ly9lcnBlbmhkZXYucmFtY291YXQuY29tL2NvcmVzZWN1cml0eW9wcyIsImF1ZCI6WyJjb20ucmFtY28udndhcGllLmFkay5hcGlzIiwiY29tLmV4dGVybmFsLmFwaXMiLCJodHRwczovL2VycGVuaGRldi5yYW1jb3VhdC5jb20vY29yZXNlY3VyaXR5b3BzL3Jlc291cmNlcyJdLCJjbGllbnRfaWQiOiJjb3JlLmluZnJhLnNydnJjbGllbnQiLCJyX3RpZCI6InJhbWNvIiwic3ViIjoiQVBOVVNFUjEiLCJhdXRoX3RpbWUiOjE3NzIxMDQ2ODcsImlkcCI6ImxvY2FsIiwianRpIjoiRjFGNEUwODIxMTAxMkUzMkQxREM1QjYxNUQ5MjZERTUiLCJpYXQiOjE3NzIxMDQ2ODcsInNjb3BlIjpbInJ2d19pbXBlcnNvbmF0ZSJdLCJhbXIiOlsiY3VzdG9tX2NsaWVudF9jcmVkZW50aWFscyJdfQ.pTx0DeHnUHCHpNdjyez3On9_zUbVhEzV2oGgTkn5X1tMIhBDzV_8dQigsATROwsdPwdZkJ5QDjzb_YStO-DzrzhMoWQjbLkk6gkiuv_Pgxr3fvFBoA6no7prqStpF4XYX8UdO-nuWA2bNLdPeZUCRX5e3QPQBy5Ch8YjjpsGgztC54m3llrixDkw_3gjKncN20h4amAfeQejZ2f-az4frI9zBzQa_hdWT9uEjHjbz55DexEeM0zEffT0x92APXF2x02w-ZnS8EoWSd2C6hXR3QqhjNC2pb_QmBnFtaFCxOM_gfqQiuW_YKqtT-TwbZt1t0wl1mbOHNlizXzIpwYboA"
+                }
     )
 
     viewpr_mcp = FastMCP.from_openapi(
         openapi_spec=spec,
         client=client,
-        name="ViewPurchaseRequest API"
+        name="ViewPurchaseRequest API",
+        validate_output=False
     )
     gateway.mount(viewpr_mcp, namespace="purchase_request")
     print("   ✓ Mounted with namespace: purchase_request")
@@ -101,7 +108,8 @@ def create_unified_server():
     createprpo_mcp = FastMCP.from_openapi(
         openapi_spec=spec,
         client=client,
-        name="CreatePRPOConversion API"
+        name="CreatePRPOConversion API",
+        validate_output=False
     )
     gateway.mount(createprpo_mcp, namespace="pr_po_conversion")
     print("   ✓ Mounted with namespace: pr_po_conversion")
@@ -123,7 +131,8 @@ def create_unified_server():
     supplier_item_mcp = FastMCP.from_openapi(
         openapi_spec=spec,
         client=client,
-        name="SupplierItemLeadTime API"
+        name="SupplierItemLeadTime API",
+        validate_output=False
     )
     gateway.mount(supplier_item_mcp, namespace="supplier_item")
     print("   ✓ Mounted with namespace: supplier_item")
@@ -145,7 +154,8 @@ def create_unified_server():
     supplier_scorecard_mcp = FastMCP.from_openapi(
         openapi_spec=spec,
         client=client,
-        name="SupplierScoreCard API"
+        name="SupplierScoreCard API",
+        validate_output=False
     )
     gateway.mount(supplier_scorecard_mcp, namespace="supplier_scorecard")
     print("   ✓ Mounted with namespace: supplier_scorecard")
@@ -167,7 +177,8 @@ def create_unified_server():
     searchbpo_mcp = FastMCP.from_openapi(
         openapi_spec=spec,
         client=client,
-        name="SearchBPO API"
+        name="SearchBPO API",
+        validate_output=False
     )
     gateway.mount(searchbpo_mcp, namespace="blanket_po")
     print("   ✓ Mounted with namespace: blanket_po")
@@ -189,7 +200,8 @@ def create_unified_server():
     viewpo_mcp = FastMCP.from_openapi(
         openapi_spec=spec,
         client=client,
-        name="ViewPO API"
+        name="ViewPO API",
+        validate_output=False
     )
     gateway.mount(viewpo_mcp, namespace="purchase_order")
     print("   ✓ Mounted with namespace: purchase_order")
@@ -211,7 +223,8 @@ def create_unified_server():
     viewreleaseslip_mcp = FastMCP.from_openapi(
         openapi_spec=spec,
         client=client,
-        name="ViewReleaseSlip API"
+        name="ViewReleaseSlip API",
+        validate_output=False
     )
     gateway.mount(viewreleaseslip_mcp, namespace="release_slip")
     print("   ✓ Mounted with namespace: release_slip")

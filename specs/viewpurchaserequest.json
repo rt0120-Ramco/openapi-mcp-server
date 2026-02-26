@@ -16,7 +16,7 @@
   },
   "servers": [
     {
-      "url": "https://erpenhdev.ramcouat.com/coreapiops/Purchase/Pur_Req_SER/v1"
+      "url": "https://erpenhdev.ramcouat.com/coreapiops/Purchase/PRA/v1"
     }
   ],
   "paths": {
@@ -788,7 +788,7 @@
           "description": "Language Id",
           "required": true,
           "schema": {
-            "type": "integer",
+            "type": "string",
             "x-schemcategory": "PP",
             "x-schemarequired": false
           }
@@ -799,7 +799,7 @@
           "description": "Orgnz Id",
           "required": true,
           "schema": {
-            "type": "integer",
+            "type": "string",
             "x-schemcategory": "PP",
             "x-schemarequired": false
           }
@@ -871,7 +871,10 @@
             "format": "date-time"
           },
           "Mode": {
-            "type": "string",
+            "oneOf": [
+              {"type": "string"},
+              {"type": "number"}
+            ],
             "description": "Mode"
           },
           "Name": {
@@ -950,11 +953,17 @@
             "description": "ShortcloseReasonCode"
           },
           "Status": {
-            "type": "string",
+            "oneOf": [
+              {"type": "string"},
+              {"type": "number"}
+            ],
             "description": "Status"
           },
           "WorkflowStatus": {
-            "type": "string",
+            "oneOf": [
+              {"type": "string"},
+              {"type": "number"}
+            ],
             "description": "WorkflowStatus"
           },
           "ProjectDetails": {
@@ -1054,11 +1063,17 @@
             "description": "RefDocLineNo"
           },
           "RefDocNo": {
-            "type": "string",
+            "oneOf": [
+              {"type": "string"},
+              {"type": "number"}
+            ],
             "description": "RefDocNo"
           },
           "RefDocType": {
-            "type": "string",
+            "oneOf": [
+              {"type": "string"},
+              {"type": "number"}
+            ],
             "description": "RefDocType"
           },
           "RequiredQty": {
@@ -1067,11 +1082,17 @@
             "format": "number"
           },
           "ScheduleType": {
-            "type": "string",
+            "oneOf": [
+              {"type": "string"},
+              {"type": "number"}
+            ],
             "description": "ScheduleType"
           },
           "Status": {
-            "type": "string",
+            "oneOf": [
+              {"type": "string"},
+              {"type": "number"}
+            ],
             "description": "Status"
           },
           "SupplierCode": {
